@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bigpicture\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: /\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# Copyright (C) 2014 the WordPress team
+# This file is distributed under the GNU General Public License v2 or later.
+#: content-chambres.php:17
+msgid "chambre"
+msgstr "Room"
+
+#: content-chambres.php:18
+msgid "suite"
+msgstr "suite"
+
+#: content-chambres.php:16
+msgid "jour"
+msgstr "day"
+
+#: content-chambres.php:23
+msgid "Lit Double"
+msgstr "King Bed"
+
+#: content-chambres.php:24
+msgid "Personnes"
+msgstr "persons"
+
+#: content-chambres.php:28
+msgid "coffre fort"
+msgstr "Safe"
+
+#: content-chambres.php:31
+msgid "Douche et Bain"
+msgstr "Shower & Bath"
+
+#: content-chambres.php:32
+msgid "coin salon"
+msgstr "Living room"
+
+#: content-chambres.php:35
+msgid "Ecran plat"
+msgstr "Flat screen"
+
+#: content-chambres.php:36
+msgid "Clim"
+msgstr "air conditioning"
+
+#: content-chambres.php:65
+msgid "Reserver"
+msgstr "Book"
+
+#: content-chambres.php:70
+msgid "Conditions Generales de Vente"
+msgstr "terms and conditions"
+
+#: header.php:94
+msgid "offres Speciales"
+msgstr "Offers"
+
+#: header.php:95
+msgid "Actualités"
+msgstr "News"
+
+#: footer.php:8
+msgid "contact"
+msgstr "contact"
+
+#: footer.php:9
+msgid "mentions legales"
+msgstr "Legal information"
+
+#: footer.php:10
+msgid "acces"
+msgstr "map  & access"
+
+#: footer.php:18
+msgid "site"
+msgstr "site by"
+
+#: footer.php:19
+msgid "site map"
+msgstr "site map"
+
+#: partial-reservation.php:20
+msgid "Arrivee"
+msgstr "Arrival"
+
+#: partial-reservation.php:40
+msgid "Nuits"
+msgstr "Nights"
+
+#: partial-reservation.php:52
+msgid "Nb personne"
+msgstr "Nb person"
+
+#: inc/shortcode-tripadvisor.php:5
+msgid "nos avis tripadvisor"
+msgstr "our tripadvisor review"
+
+#: content-chambres.php:21
+msgid "de %s &euro; "
+msgstr "from %s &euro; "
+
+#: content-chambres.php:21
+msgid "à %s &euro; "
+msgstr "to %s &euro; "
+
+#~ msgid "Evenements"
+#~ msgstr "Event"
+
+#~ msgid "2 Personnes"
+#~ msgstr "2 persons"

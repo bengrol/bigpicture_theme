@@ -1,0 +1,106 @@
+# Copyright (C) 2014 the WordPress team
+# This file is distributed under the GNU General Public License v2 or later.
+
+
+
+#: content-chambres.php:17
+msgid "chambre"
+msgstr ""
+
+#: content-chambres.php:18
+msgid "suite"
+msgstr ""
+
+
+#: content-chambres.php:16
+msgid "jour"
+msgstr ""
+
+#: content-chambres.php:23
+msgid "Lit Double"
+msgstr ""
+
+#: content-chambres.php:24
+msgid "Personnes"
+msgstr ""
+
+#: content-chambres.php:28
+msgid "coffre fort"
+msgstr ""
+
+#: content-chambres.php:31
+msgid "Douche et Bain"
+msgstr ""
+
+#: content-chambres.php:32
+msgid "coin salon"
+msgstr ""
+
+#: content-chambres.php:35
+msgid "Ecran plat"
+msgstr ""
+
+#: content-chambres.php:36
+msgid "Clim"
+msgstr ""
+
+#: content-chambres.php:65
+msgid "Reserver"
+msgstr ""
+
+#: content-chambres.php:70
+msgid "Conditions Generales de Vente"
+msgstr ""
+
+#: header.php:94
+msgid "offres Speciales"
+msgstr ""
+
+#: header.php:95
+msgid "Actualités"
+msgstr ""
+
+#: footer.php:8
+msgid "contact"
+msgstr ""
+
+#: footer.php:9
+msgid "mentions legales"
+msgstr ""
+
+#: footer.php:10
+msgid "acces"
+msgstr ""
+
+#: footer.php:18
+msgid "site"
+msgstr ""
+
+#: footer.php:19
+msgid "site map"
+msgstr ""
+
+#: partial-reservation.php:20
+msgid "Arrivee"
+msgstr ""
+
+#: partial-reservation.php:40
+msgid "Nuits"
+msgstr ""
+
+#: partial-reservation.php:52
+msgid "Nb personne"
+msgstr ""
+
+#: inc/shortcode-tripadvisor.php:5
+msgid "nos avis tripadvisor"
+msgstr ""
+
+#: content-chambres.php:21
+msgid "de %s &euro; "
+msgstr ""
+
+#: content-chambres.php:21
+msgid "à %s &euro; "
+msgstr ""
+
