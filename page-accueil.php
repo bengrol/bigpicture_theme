@@ -6,7 +6,9 @@
 get_header(); ?>
 
 <div id="primary" class="content-area ">
-    <?php  echo do_shortcode("[metaslider id=318]"); ?>
+    <?php  // echo do_shortcode("[metaslider id=318]"); ?>
+	 <?php  echo do_shortcode('[metaslider title="slider accueil"]'); ?> 
+	
 </div> 
 
 

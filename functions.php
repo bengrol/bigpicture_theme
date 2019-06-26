@@ -40,11 +40,17 @@ function getPriceRange(){
 
 
 function getBookingUrl(){
+  $mapping = [
+         4 => 'fr-FR',
+         1 => 'de-DE',
+         2 => 'en-GB',
+  ];
+
   global $post;
-  $urlRes = "https://sb.ghix.net//default.aspx?View=Booking1";
-  $urlRes .= "&HotelID=".getHotelId();
-  $urlRes .= "&ID=".get_post_meta($post->ID , '_id-chambre', true);
-  $urlRes .= "&Language=".  getCurrentLang();
+  $urlRes = "https://via.eviivo.com";
+  $urlRes .= "/" . get_bloginfo('language');
+  $urlRes .= "/Puychene11120";
+
   return $urlRes;
 }
 

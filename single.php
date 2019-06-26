@@ -9,7 +9,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php 
-                                
+                            
                                 the_title();
                                 echo '<div class="entry-content">';
                                 the_content();

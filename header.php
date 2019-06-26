@@ -61,15 +61,15 @@
         </div>
         
                 <?php
-                $args = array(
+           /*    $args = array(
                     'theme_location' => 'lang'
                 );
                 wp_nav_menu($args);
-                ?>
+              */  ?>
         
         <div class="btn-grp-offres" >
             
-         <a href="<?=get_permalink( 604); ?>" class="btn-offre border-bottom-radius">
+         <a href="<?=get_permalink( 1520); ?>" class="btn-offre border-bottom-radius">
             <i class="fa fa-bookmark-o"></i><?php _e('visite 360', 'bigpicture'); ?></a>
         </div>
                     
@@ -82,7 +82,7 @@
     <aside>
 
         <div class="btn-grp-offres" role="group" >
-                <a href="<?= esc_url( home_url( '/nos-offres/' ) ) ?>" class="btn-offre border-top-radius"><i class="fa fa-heart "></i><?php _e('offres Speciales', 'bigpicture'); ?></a>
+              
                 <a href="<?=get_permalink( 563); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
                 <button id="bt-resa-aside"  class="btn-resa border-bottom-radius resa-toogle"><i class="fa fa-calendar "></i><?php _e('Reserver', 'bigpicture'); ?></button>
 

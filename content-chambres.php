@@ -9,6 +9,8 @@ $getCurrentbigpicturePage =  get_permalink( $post->ID );
 
 ?>
 
+
+
 <article class="art-chambre">
     <header class="header-colipsable" data-state="inactive"  
             style="background-image : url(<?= getImageHeader(); ?>);">
