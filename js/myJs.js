@@ -27,16 +27,24 @@ $(function() {
      *  retourne la date du jour
      * @returns {String}
      */
-    function getCurrentDate(){
+    function getCurrentDate(offset){
+
         var date = new Date();
-        var d = date.getDate();
-        var day = (d < 10) ? '0' + d : d;
-        var m = date.getMonth() + 1;
-        var month = (m < 10) ? '0' + m : m;
-        var yy = date.getYear();
-        var year = (yy < 1000) ? yy + 1900 : yy;
-        var currDate = day + "." + month + "." + year;
-        return currDate;
+        //
+        // var d = date.getDate();
+        // var day = (d < 10) ? '0' + d : d;
+        // var m = date.getMonth() + 1;
+        // var month = (m < 10) ? '0' + m : m;
+        // var yy = date.getYear();
+        // var year = (yy < 1000) ? yy + 1900 : yy;
+        // var currDate = day + "." + month + "." + year;
+        // return currDate;
+        if(offset){
+
+            date.setDate(date.getDate() +offset);
+            return date.toLocaleDateString();
+        }
+        return date.toLocaleDateString();
     }
 
     function adapteScreen(){
@@ -120,7 +128,7 @@ $(function() {
       $header.attr('data-state' , 'active');
       $overlay.animate({
         opacity: 1,
-        backgroundColor: "#759590"    
+        backgroundColor: "#5e4742"
       }, animationSpeed );
     };
 
@@ -145,7 +153,8 @@ $(function() {
 
     });
 
-    $('#tdate').val(getCurrentDate());
+    $('#tsdate').val(getCurrentDate());
+    $('#tedate').val(getCurrentDate(3));
 
     $(window).on('resize', function(){
         adapteScreen();

@@ -15,8 +15,8 @@
 .dpTable {
   font-size: 14px;
   text-align: center;
-  color: #5a988f;
-  background-color: #dbe4e3;
+  color: #0e0b0a;
+  background-color: #d8e0ad;
   width: 100%;
   height: 100%;
   -webkit-border-top-left-radius: 5px;
@@ -34,7 +34,7 @@
 }
 
 .hoverTD, .dpDayHighlightTD:hover, .dpTD:Hover {
-  background-color: #5a988f;
+  background-color: #0e0b0a;
   cursor: pointer;
   color: white;
 }
@@ -44,14 +44,14 @@
 }
 
 .buttonStyle, .dpTodayButton, .dpButton, .dpDayTD, .dpDayHighlightTD {
-  background-color: #CCCCCC;
-  border: 1px solid #8c8c8c;
+  background-color: #a07f77;
+  border: 1px solid #59433f;
   color: white;
 }
 
 .buttonStyleHover, .dpTodayButton:hover, .dpButton:hover {
-  background-color: #8c8c8c;
-  border: 1px solid #595959;
+  background-color: #59433f;
+  border: 1px solid #1d1614;
   color: white;
 }
 
@@ -89,7 +89,7 @@
   border-radius: 2px;
   margin-top: 2px;
   padding: 15px 10px;
-  background-color: #627D79;
+  background-color: #9fb143;
 }
 
 .resa-toogle {
@@ -103,19 +103,12 @@
 }
 
 #formPicker {
-  color: #dbe4e3;
+  color: #d8e0ad;
   line-height: 2.6;
-  /*
-      input[type=submit]:disabled {
-          background-color: rgb(135, 152, 149);
-          border : none;
-
-
-  }*/
 }
 #formPicker input {
   border-style: solid;
-  background-color: #dbe4e3;
+  background-color: #d8e0ad;
   color: #4a3834;
   -webkit-border-top-left-radius: 4px;
   -moz-border-top-left-radius: 4px;
@@ -132,7 +125,7 @@
 }
 #formPicker select {
   border-style: solid;
-  background-color: #dbe4e3;
+  background-color: #d8e0ad;
   color: #4a3834;
   width: 100%;
 }
@@ -279,7 +272,7 @@ aside div button {
 }
 
 #content p {
-  color: #A39C94;
+  color: #3b4219;
   font-size: 1.2em;
 }
 #content article section {
@@ -316,11 +309,11 @@ section .bd-ch {
 }
 
 #resa-container-close:hover, #resa-container-close:active {
-  color: #A39C94;
+  color: #3b4219;
 }
 
 #main-nav a:hover {
-  color: #97c1bb;
+  color: #4a3834;
 }
 
 .btn-grp-offres a:hover, .btn-grp-offres button:hover, .btn-grp-offres-resp a:hover, .btn-grp-offres-resp button:hover {
@@ -356,10 +349,10 @@ button {
 }
 
 .social-icon-set a, .price-info .sec-info a {
-  color: #A39C94;
+  color: #3b4219;
 }
 .social-icon-set a:hover, .price-info .sec-info a:hover {
-  color: #7e766c;
+  color: #090b04;
 }
 
 .chambre-icon-set .row div {
@@ -371,11 +364,11 @@ button {
   border-bottom: 1px dotted #aaaaaa;
 }
 .chambre-icon-set .row div i {
-  color: #97c1bb;
+  color: #4a3834;
   padding: 0 10%;
 }
 .chambre-icon-set .row div i:hover {
-  color: #b7d4d0;
+  color: #684f49;
 }
 
 .price-info .sec-info {
@@ -386,7 +379,7 @@ button {
 }
 
 .btn-offre {
-  background-image: linear-gradient(#f8fafa, #dbe4e3);
+  background-image: linear-gradient(#e9eed2, #d8e0ad);
   color: #4a3834;
 }
 
@@ -529,9 +522,12 @@ button {
 }
 
 .menu-lang-container {
-  background-color: #809c98;
+  background-color: #9aab44;
   width: 100%;
   height: auto;
+}
+.menu-lang-container ul.menu {
+  display: inherit;
 }
 
 #metaslider_18 {
@@ -603,7 +599,7 @@ button {
   background-color: #fff;
   background-color: #F2F4F4;
   padding: 20px 10px;
-  color: #A39C94;
+  color: #3b4219;
 }
 .art-chambre section span {
   display: block;
@@ -630,7 +626,7 @@ button {
   color: #fff;
 }
 #footer-row a:hover {
-  color: #97c1bb;
+  color: #4a3834;
 }
 #footer-row .link-footer {
   list-style-type: none;

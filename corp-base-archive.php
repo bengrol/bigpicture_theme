@@ -23,37 +23,16 @@
                 
    
     <?php /* archive de page */
-    $meta_key = "chambres";
-    $order = "ASC";
- switch ($temp) {
-     case "chambres":
-         $meta_key = "_prix-chambre";
-         $order = "ASC";
-         break;
-     case "offres":
-         $meta_key = "_id-offre";
-         $order = "DESC";
-         break;
 
-     default:
-             $meta_key = "chambres";
-    $order = "ASC";
-         break;
- } 
-    
- 
-    $args = array( 
+    $args = array(
         'post_type' => $temp,
         'posts_per_page' => -1,
-        'meta_key'   => $meta_key,
-        'orderby'    => 'meta_value_num',
-	'order'      => $order
-        );
-    
-    
+        'post_status' => 'publish',
+        'orderby' => 'meta_value_num',
+        'order' => "ASC"
+    );
+
     $loop = new WP_Query( $args );
-
-
 
      while ( $loop->have_posts() ) : $loop->the_post(); 
 

@@ -104,9 +104,9 @@ header#main-header {
 
 
 #logo-container, #main-nav-container{
-    background-color : lighten($bleu-pr-bigpicture, 12%);
+    background-color : lighten($main-fonce-bigpicture, 12%);
 
-    @include radial-gradient(circle at 50% 16% , lighten($bleu-pr-bigpicture, 12%) 0%, $bleu-pr-bigpicture 100%);
+    @include radial-gradient(circle at 50% 16% , lighten($main-fonce-bigpicture, 12%) 0%, $main-fonce-bigpicture 100%);
 
 }
 
@@ -156,7 +156,7 @@ aside {
 
 .titre-page, .sec-prix{
     //color: #759590;
-    color: $bleu-pr-bigpicture;
+    color: $main-fonce-bigpicture;
 }
 .titre-page{
     font-family: $font-bigpicture;
@@ -203,7 +203,7 @@ section{
 
 
 
-#main-nav a:hover{ color: $bleu-tx-bigpicture; }
+#main-nav a:hover{ color: $main-fonce-bigpicture; }
 
 .btn-grp-offres, .btn-grp-offres-resp{
     a:hover, button:hover {
@@ -226,10 +226,10 @@ section{
 
     a.linkvisite360{
         margin-top: 10px;
-        background-color: $bleu-pr-bigpicture;
+        background-color: $main-fonce-bigpicture;
     }
     .btn-offre {
-        color : $bleu-pr-bigpicture;
+        color : $main-fonce-bigpicture;
     }
     i{
         padding-right: 6px;
@@ -274,14 +274,14 @@ button{
         border-bottom : 1px dotted #aaaaaa;
 
         i{
-            color : $bleu-tx-bigpicture;
+            color : $main-fonce-bigpicture;
             @extend .transition-color-2s;
             padding : 0 10%;
 
         }
 
         i:hover{
-            color : lighten($bleu-tx-bigpicture, 10%);
+            color : lighten($main-fonce-bigpicture, 10%);
         }
 
     }
@@ -306,11 +306,11 @@ button{
 
 .btn-offre{	
     background-image: linear-gradient( lighten($gris-pr-bigpicture , 10%), $gris-pr-bigpicture);
-    color: $bleu-pr-bigpicture;
+    color: $main-fonce-bigpicture;
 }
 .btn-event, footer{
-    background-color : lighten($bleu-pr-bigpicture, 10%);
-    background-image: linear-gradient(lighten($bleu-pr-bigpicture , 10%), $bleu-pr-bigpicture);
+    background-color : lighten($main-fonce-bigpicture, 10%);
+    background-image: linear-gradient(lighten($main-fonce-bigpicture , 10%), $main-fonce-bigpicture);
 }
 .btn-resa{
     background-image: linear-gradient(lighten($rouge-pr-bigpicture , 10%), $rouge-pr-bigpicture);
@@ -430,11 +430,14 @@ button{
 
 .menu-lang-container{
     
-    background-color: #809c98;
+    background-color: #9aab44;
     
     width: 100%;
     height: auto;
-    
+
+    ul.menu{
+        display: inherit;
+    }
 }
 
 #metaslider_18{
@@ -555,7 +558,7 @@ button{
         @extend .transition-color-2s;
     }
     a:hover{
-        color : $bleu-tx-bigpicture;
+        color : $main-fonce-bigpicture;
     }
 
     .link-footer{

@@ -36,7 +36,7 @@
     <header id="main-header">
         <div id="logo-container">
             <a href="<?php bloginfo('url'); ?>">
-                <img src="<?php echo get_template_directory_uri() ?>/images/logo/logo-2.png" id="img-logo">
+                <img src="<?php echo get_template_directory_uri() ?>/images/logo/logo-blanc.png" id="img-logo">
             </a>
         </div>
 
@@ -59,13 +59,15 @@
             </nav>
 
         </div>
-        
-                <?php
-           /*    $args = array(
-                    'theme_location' => 'lang'
-                );
-                wp_nav_menu($args);
-              */  ?>
+        <div class="menu-lang-container">
+            <?php
+            $args = array(
+                'theme_location' => 'lang',
+                'container' => false
+            );
+            wp_nav_menu($args);
+            ?>
+        </div>
         
         <div class="btn-grp-offres" >
             
@@ -83,7 +85,7 @@
 
         <div class="btn-grp-offres" role="group" >
               
-                <a href="<?=get_permalink( 563); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
+                <a href="<?php echo get_permalink( 1039); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
                 <button id="bt-resa-aside"  class="btn-resa border-bottom-radius resa-toogle"><i class="fa fa-calendar "></i><?php _e('Reserver', 'bigpicture'); ?></button>
 
         </div>

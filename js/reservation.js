@@ -29,22 +29,15 @@ if( parseInt(idLanguage)=== 4){ // fr
  textCurrentMouth = "mois courant";
  textClose = "fermer";
 
-
-
-
-
 }
 
-//
 
- 
 var defaultDateSeparator = ".";
 var defaultDateFormat = "dmy";
 var dateSeparator = defaultDateSeparator;
 var dateFormat = defaultDateFormat;
 
 // for current date
-
 function displayDatePicker(dateFieldName, displayBelowThisObject, dtFormat, dtSep)
 {
   var targetDateField = document.getElementsByName (dateFieldName).item(0);
@@ -85,22 +78,12 @@ function drawDatePicker(targetDateField, x, y)
     newNode.setAttribute("class", "dpDiv");
     newNode.setAttribute("style", "visibility: hidden;");
     document.getElementById('footer-sec').appendChild(newNode);
-    //document.body.appendChild(newNode);
+
   }
  
   var pickerDiv = document.getElementById(datePickerDivID);
-  //pickerDiv.style.position = "absolute";
+
   pickerDiv.style.position = "fixed";
-  /*
-    pickerDiv.style.left = x + "px";
-  pickerDiv.style.top = y + "px";
-  pickerDiv.style.width = 300 +"px";
-   
-    pickerDiv.style.left = 33 + "%";
-  pickerDiv.style.top = 20 + "%";
-  pickerDiv.style.width = 33 +"%"; 
-  pickerDiv.style.height = 60 +"%"; 
- */ 
   pickerDiv.style.visibility = (pickerDiv.style.visibility == "visible" ? "hidden" : "visible");
   pickerDiv.style.display = (pickerDiv.style.display == "block" ? "none" : "block");
   pickerDiv.style.zIndex = 10000;
@@ -137,7 +120,6 @@ function refreshDatePicker(dateFieldName, year, month, day)
   var DIV_title = "<div class='dpTitleText'>";
   var DIV_selected = "<div class='dpDayHighlight'>";
   var xDIV = "</div>";
- 
   var html = TABLE;
  
   html += TR_title;
@@ -187,7 +169,6 @@ function refreshDatePicker(dateFieldName, year, month, day)
   html += xTABLE;
  
   document.getElementById(datePickerDivID).innerHTML = html;
- // adjustiFrame();
 }
 
 function getButtonCode(dateFieldName, dateVal, adjust, label)
@@ -278,40 +259,6 @@ function splitDateString(dateString)
   return dArray;
 }
 
-/**
-Update the field with the given dateFieldName with the dateString that has been passed,
-and hide the datepicker. If no dateString is passed, just close the datepicker without
-changing the field value.
-
-Also, if the page developer has defined a function called datePickerClosed anywhere on
-the page or in an imported library, we will attempt to run that function with the updated
-field as a parameter. This can be used for such things as date validation, setting default
-values for related fields, etc. For example, you might have a function like this to validate
-a start date field:
-
-function datePickerClosed(dateField)
-{
-  var dateObj = getFieldDate(dateField.value);
-  var today = new Date();
-  today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
- 
-  if (dateField.name == "StartDate") {
-    if (dateObj < today) {
-      // if the date is before today, alert the user and display the datepicker again
-      alert("Please enter a date that is today or later");
-      dateField.value = "";
-      document.getElementById(datePickerDivID).style.visibility = "visible";
-      adjustiFrame();
-    } else {
-      // if the date is okay, set the EndDate field to 7 days after the StartDate
-      dateObj.setTime(dateObj.getTime() + (7 * 24 * 60 * 60 * 1000));
-      var endDateField = document.getElementsByName ("EndDate").item(0);
-      endDateField.value = getDateString(dateObj);
-    }
-  }
-}
-
-*/
 function updateDateField(dateFieldName, dateString)
 {
   var targetDateField = document.getElementsByName (dateFieldName).item(0);
