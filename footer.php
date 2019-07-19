@@ -5,7 +5,13 @@
         
         <div id="footer-row" class="">
 
-                <p class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-3 col-xs-12 footer-logo">
+                <a href="<?php bloginfo('url'); ?>">
+                    <img src="<?php echo get_template_directory_uri() ?>/images/logo/logo-blanc-sm.png" >
+                </a>
+            </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
 
                     <p>DOMAINE DE PUYCHÊNE</p>
                     <p>85 route du Somail - 11120 Saint-Nazaire-d'Aude</p>

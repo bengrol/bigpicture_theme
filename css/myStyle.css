@@ -364,7 +364,7 @@ button {
   border-bottom: 1px dotted #aaaaaa;
 }
 .chambre-icon-set .row div i {
-  color: #4a3834;
+  color: #9fb143;
   padding: 0 10%;
 }
 .chambre-icon-set .row div i:hover {
@@ -385,11 +385,11 @@ button {
 
 .btn-event, footer {
   background-color: #684f49;
-  background-image: linear-gradient(#684f49, #4a3834);
+  background-image: linear-gradient(#696643, #4a482f);
 }
 
 .btn-resa, #menu-header {
-  background-image: linear-gradient(#c65c2e, #9d4924);
+  background-image: linear-gradient(#b4c463, #9fb143);
 }
 
 @-webkit-keyframes greenPulse {
@@ -522,7 +522,13 @@ button {
 }
 
 .menu-lang-container {
-  background-color: #9aab44;
+  background: -webkit-radial-gradient(circle at 41% 337%, #e3d9d7 0%, #4a3834 94%);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(circle at 41% 337%, #e3d9d7 0%, #4a3834 94%);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(circle at 41% 337%, #e3d9d7 0%, #4a3834 94%);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(circle at 41% 337%, #e3d9d7 0%, #4a3834 94%);
   width: 100%;
   height: auto;
 }
@@ -633,7 +639,7 @@ button {
 }
 
 .redBorder, #footer-row {
-  border-top: solid 9px #9d4924;
+  border-top: solid 9px #9fb143;
 }
 
 #responsive {

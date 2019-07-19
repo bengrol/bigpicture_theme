@@ -204,7 +204,40 @@ register_nav_menus(array(
 load_theme_textdomain('bigpicture', get_template_directory().'/languages');
 
 
- add_theme_support( 'post-thumbnails' ); 
+ add_theme_support( 'post-thumbnails' );
+
+
+
+/**
+
+ * Enregistre 2 zones de widget
+
+ */
+
+add_action( 'widgets_init', function () {
+
+    register_sidebar( array(
+        'name'          => __( 'Zone Widget principale', 'bigpicture' ),
+        'id'            => 'bigpicture-sidebar-1',
+        'description'   => __( 'Zon de widget Barre latterale', 'bigpicture' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Zone Widget du footer', 'bigpicture' ),
+        'id'            => 'bigpicture-sidebar-2',
+        'description'   => __( 'Zone de widget Footer', 'bigpicture' ),
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
+}
+
+);
 
 
 

@@ -124,11 +124,15 @@ $(function() {
        }, animationSpeed );
 
     }else{
+
+       let main_fonce_bigpicture = "#4a3834";
+       let vert_fonce_bigpicture =  "#9fb143";
+       let rouge_pr_bigpicture = "#9d4924";
       
       $header.attr('data-state' , 'active');
       $overlay.animate({
         opacity: 1,
-        backgroundColor: "#5e4742"
+        backgroundColor: vert_fonce_bigpicture
       }, animationSpeed );
     };
 
