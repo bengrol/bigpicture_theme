@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area ">
-        <?php echo do_shortcode('[metaslider title="slider accueil"]'); ?>
-    </div>
+   <section id="bandeau" class="" style="background-image: url('<?= getImageBandeau() ?>')"></section>
 
     <!-- home-page -->
 <?php if (have_posts()) : ?>
@@ -11,12 +9,17 @@
         <?php while (have_posts()) : the_post(); ?>
 
             <article>
-                <h1 class="titre-page"><?php the_title(); ?><span></span></h1>
 
                 <?php
-                the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>');
-                ?>
-                <p><?php the_excerpt(); ?></p>
+                the_title(sprintf('<a href="%s" rel="bookmark"><h1 class="titre-page">', esc_url(get_permalink())), '</h1></a>');	
+                   
+                
+                if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('blog-article-sm-thumb');
+                        }
+                    ?>
+				
+                <p><?php the_excerpt('lire la suite'); ?></p>
             </article>
 
         <?php endwhile; ?>
