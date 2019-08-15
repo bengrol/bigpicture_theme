@@ -104,3 +104,6 @@ msgstr ""
 msgid "à %s &euro; "
 msgstr ""
 
+#: fonctions.php:245
+msgid "read_more"
+msgstr "lire la suite"

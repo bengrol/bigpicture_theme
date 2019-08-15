@@ -672,7 +672,7 @@ button {
   position: absolute;
   top: 0;
   z-index: 1000;
-  background: #dbe4e3;
+  background: #f30404;  /* todo change the loader color  */
   background-image: url("../images/gif/loader.gif");
   background-repeat: no-repeat;
   background-position: center;

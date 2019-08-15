@@ -9,8 +9,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.3\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
 
 # Copyright (C) 2014 the WordPress team
 # This file is distributed under the GNU General Public License v2 or later.
@@ -116,4 +116,4 @@ msgstr ""
 
 #: fonctions.php:245
 msgid "read_more"
-msgstr "read more"
+msgstr "lire la suite"

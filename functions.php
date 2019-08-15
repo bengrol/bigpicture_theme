@@ -236,7 +236,15 @@ add_action( 'widgets_init', function () {
 
 );
 
+function bigpicture_change_and_link_excerpt( $more ) {
+	if ( is_admin() ) {
+		return $more;
+	}
 
+	// Change text, make it link, and return change
+	return '&hellip; <a href="' . get_the_permalink() . '"> ' . __( 'read_more', 'bigpicture' ) . ' </a>';
+ }
+ add_filter( 'excerpt_more', 'bigpicture_change_and_link_excerpt', 999 );
 
 add_action( 'add_meta_boxes_page', 'bigpicture_meta_boxes' );
 
@@ -314,12 +322,8 @@ function bigpicture_save_custom_post_meta() {
     }
 }
 
-
-
 add_action( 'publish_page', 'bigpicture_save_custom_post_meta' );
-
 add_action( 'draft_page', 'bigpicture_save_custom_post_meta' );
-
 add_action( 'future_page', 'bigpicture_save_custom_post_meta' );
 
 
