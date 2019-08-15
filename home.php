@@ -11,10 +11,10 @@
             <article>
 
                 <?php
-                the_title(sprintf('<a href="%s" rel="bookmark"><h1 class="titre-page">', esc_url(get_permalink())), '</h1></a>');	
-                   
-                
-                if ( has_post_thumbnail() ) {
+                the_title(sprintf('<a href="%s" rel="bookmark"><h1 class="titre-page">', esc_url(get_permalink())), '</h1></a>');
+              
+				
+				   if ( has_post_thumbnail() ) {
                         the_post_thumbnail('blog-article-sm-thumb');
                         }
                     ?>
