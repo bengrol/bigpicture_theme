@@ -1,17 +1,20 @@
-// $font-oldStyle: 
-$font-script-oldStyle: Rochester, helvetica, arial, sans-serif;
-$font-oldStyle:  'Libre Baskerville', serif;;
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic);
+$font-bigpicture: Lato, helvetica, arial, sans-serif;
 
-$prim-color-oldStyle: #46514B; // vert/gris fonce 
-$sec-color-oldStyle: rgba(142, 168, 119, 1); // vert clair   
- 
-$ter-color-oldStyle:  rgb(226, 222, 204); //  beige
-$quatro-color-oldStyle:  rgb(242, 244, 244); //  blanc
+$bleu-pr-bigpicture: #4a3834;
+$rouge-pr-bigpicture: #7a8852;
+$gris-pr-bigpicture: #b1c18c;
 
-$prim-color-txt: lighten($prim-color-oldStyle, 20%);
-$sec-color-txt: lighten($sec-color-oldStyle, 10%);
+$bleu-tx-bigpicture: #97c1bb;
+$gris-tx-bigpicture: #A39C94;
 
-$gris-btn-artemise: #CCCCCC;
+$gris-btn-bigpicture: #CCCCCC;
+
+$fauchon-marron-clair-2 : #8f7d6d;
+$fauchon-marron-clair : #9d4924;
+$fauchon-vert : #7a8852; 
+$fauchon-vert-fonce: #5c821a;
+$height-resp : 100px;
 
 
 
@@ -36,28 +39,6 @@ $gris-btn-artemise: #CCCCCC;
      border-bottom-right-radius: $radius;
 }
 
-@mixin all-border-radius($tl, $bl, $br,  $tr) {
-    //top lef;
-  -webkit-border-top-left-radius: $tl;
-     -moz-border-top-left-radius: $tl;
-     border-top-left-radius: $tl;
-     //bottom left
-  -webkit-border-bottom-left-radius: $bl;
-     -moz-border-bottom-left-radius: $bl;
-     border-bottom-left-radius: $bl;
-     //bottom  right
-  -webkit-border-bottom-right-radius: $br;
-     -moz-border-bottom-right-radius: $br;
-     border-bottom-right-radius: $br;
-     //top right
-  -webkit-border-top-right-radius: $tr;
-     -moz-border-top-right-radius: $tr;
-     border-top-right-radius: $tr;
-    
-}
-
-
-
 @mixin transition-color($time){
     transition-property: color;
     transition-duration: $time;
@@ -66,15 +47,16 @@ $gris-btn-artemise: #CCCCCC;
     
 }
 
-@mixin transition-background-color($time, $color){
-        background-color: $color;
-    -webkit-transition: background-color $time linear;
-    -moz-transition: background-color $time linear;
-    -o-transition: background-color $time linear;
-    -ms-transition: background-color $time linear;
-    transition: background-color $time linear;
+
+@mixin transition-prop($prop, $time){
+    transition-property: $prop;
+    transition-duration: $time;
+    -webkit-transition-duration: $time;
+    -webkit-transition-property: $prop;
     
 }
+
+
 
 
 @mixin border-radius($radius) {
@@ -115,7 +97,7 @@ $gris-btn-artemise: #CCCCCC;
 
   @-webkit-keyframes boxPulse {
   from {  -webkit-box-shadow: 0 0 9px #333; }
-  50% {  -webkit-box-shadow: 0 0px 22px ($color, 30%); font-size: 1.25em }
+  50% {  -webkit-box-shadow: 0 0px 22px lighten($color, 30%); font-size: 1.25em }
   to {  -webkit-box-shadow: 0 0 9px #333; }
 }
 
