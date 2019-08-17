@@ -1,20 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic);
-$font-bigpicture: Lato, helvetica, arial, sans-serif;
+// $font-oldStyle: 
+$font-script-oldStyle: Rochester, helvetica, arial, sans-serif;
+$font-oldStyle:  'Libre Baskerville', serif;;
 
-$main-fonce-bigpicture: #4a3834;
-$vert-fonce-bigpicture:  #9fb143;
-$rouge-pr-bigpicture: #9d4924;
-// $gris-pr-bigpicture: #dbe4e3;
-$gris-pr-bigpicture: lighten($vert-fonce-bigpicture , 30);
+$prim-color-oldStyle: #46514B; // vert/gris fonce 
+$sec-color-oldStyle: rgba(142, 168, 119, 1); // vert clair   
+ 
+$ter-color-oldStyle:  rgb(226, 222, 204); //  beige
+$quatro-color-oldStyle:  rgb(242, 244, 244); //  blanc
 
+$prim-color-txt: lighten($prim-color-oldStyle, 20%);
+$sec-color-txt: lighten($sec-color-oldStyle, 10%);
 
-
-//$gris-tx-bigpicture: #A39C94;
-$gris-tx-bigpicture: darken($vert-fonce-bigpicture , 30);
-$gris-btn-bigpicture: lighten($main-fonce-bigpicture , 30);
-
-$height-resp : 100px;
-
+$gris-btn-artemise: #CCCCCC;
 
 
 
@@ -39,6 +36,28 @@ $height-resp : 100px;
      border-bottom-right-radius: $radius;
 }
 
+@mixin all-border-radius($tl, $bl, $br,  $tr) {
+    //top lef;
+  -webkit-border-top-left-radius: $tl;
+     -moz-border-top-left-radius: $tl;
+     border-top-left-radius: $tl;
+     //bottom left
+  -webkit-border-bottom-left-radius: $bl;
+     -moz-border-bottom-left-radius: $bl;
+     border-bottom-left-radius: $bl;
+     //bottom  right
+  -webkit-border-bottom-right-radius: $br;
+     -moz-border-bottom-right-radius: $br;
+     border-bottom-right-radius: $br;
+     //top right
+  -webkit-border-top-right-radius: $tr;
+     -moz-border-top-right-radius: $tr;
+     border-top-right-radius: $tr;
+    
+}
+
+
+
 @mixin transition-color($time){
     transition-property: color;
     transition-duration: $time;
@@ -47,16 +66,15 @@ $height-resp : 100px;
     
 }
 
-
-@mixin transition-prop($prop, $time){
-    transition-property: $prop;
-    transition-duration: $time;
-    -webkit-transition-duration: $time;
-    -webkit-transition-property: $prop;
+@mixin transition-background-color($time, $color){
+        background-color: $color;
+    -webkit-transition: background-color $time linear;
+    -moz-transition: background-color $time linear;
+    -o-transition: background-color $time linear;
+    -ms-transition: background-color $time linear;
+    transition: background-color $time linear;
     
 }
-
-
 
 
 @mixin border-radius($radius) {
@@ -97,7 +115,7 @@ $height-resp : 100px;
 
   @-webkit-keyframes boxPulse {
   from {  -webkit-box-shadow: 0 0 9px #333; }
-  50% {  -webkit-box-shadow: 0 0px 22px lighten($color, 30%); font-size: 1.25em }
+  50% {  -webkit-box-shadow: 0 0px 22px ($color, 30%); font-size: 1.25em }
   to {  -webkit-box-shadow: 0 0 9px #333; }
 }
 

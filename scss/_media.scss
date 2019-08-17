@@ -1,9 +1,12 @@
 @import "_variables.scss";
-
+$height-resp :  100px;
 
 @media only screen and (min-width : 1001px){
     
-    #resa-responsive , #main-nav-container-responsive{
+    #resa-responsive{
+        display: none;
+    }
+    #main-nav-container-responsive{
         display : none;
         
     }
@@ -12,9 +15,7 @@
 
 @media only screen and (max-width: 1000px) and (min-width: 0em){
 
-    .menu-lang-container{
-        display: none;
-    }
+    
     
     #bandeau{
         min-height: 140px;
@@ -50,7 +51,7 @@
     }
     header#main-header{
         
-        background-color: $main-fonce-bigpicture;
+        background-color: $prim-color-oldStyle;
         left: 0px;
         width: 100%;
         height: $height-resp;
