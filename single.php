@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+
+
+
 	<div id="primary" class="content-area">
         <div class="row">
             <section id="bandeau" class="bd-<?php echo( basename(get_permalink()) );?>" style="background-image: url('<?= getImageBandeau(); ?>')"></section>

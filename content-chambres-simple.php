@@ -24,17 +24,17 @@
 <section class="col-md-3 sec-chambre">
     <div class="thumbnail" style="text-align: center;" >
         <h3>
-            <a href="<?= get_permalink(get_the_ID()); ?>" title="<?php _e('Location villa et maison vacances', 'oldStyle'); ?><?php the_title(); ?> " style="color: #a8b951;"  >
-                <?php _e('Location Villa', 'oldStyle'); ?> <?php the_title(); ?>
+            <a href="<?= get_permalink(get_the_ID()); ?>" title="<?php _e('Location villa et maison vacances', 'bigpicture'); ?><?php the_title(); ?> " style="color: #a8b951;"  >
+                <?php _e('Location Villa', 'bigpicture'); ?> <?php the_title(); ?>
             </a>
         </h3>
         <span class="detail-header">
             <?php 
 if(!empty($listePrix)){
                 if(min($listePrix)!= max($listePrix)){
-                    printf( __( 'A partir de %s&euro; /semaine', 'oldStyle' ), min($listePrix) );
+                    printf( __( 'A partir de %s&euro; /semaine', 'bigpicture' ), min($listePrix) );
                 }  else {
-                    printf( __( '%s /semaine', 'oldStyle' ), min($listePrix) );
+                    printf( __( '%s /semaine', 'bigpicture' ), min($listePrix) );
                 }
             }
             ?>
@@ -43,9 +43,8 @@ if(!empty($listePrix)){
         </span>
 
         <div class="content-detail-chambre">
-        
             <p><?php // echo get_truncate_content(20); ?></p>
-            <div><?= oldStyle_read_more(sprintf(__( 'Louer %s', 'oldStyle' ), get_the_title()));?></div>
+            <div><?= bigpicture_read_more(sprintf(__( 'Louer %s', 'bigpicture' ), get_the_title()));?></div>
         </div>
         <?= getGallery('chambre', 'archives'); ?>
     </div>

@@ -326,5 +326,11 @@ function bigpicture_change_and_link_excerpt( $more ) {
  add_action( 'draft_page', 'bigpicture_save_custom_post_meta' );
  add_action( 'future_page', 'bigpicture_save_custom_post_meta' );
  
+ function bigpicture_read_more($titre=null){
+    if($titre==null){
+        $titre = __( 'Lire la suite', 'bigpicture' );
+    }
+    return '<a class="btn btn-bigpicture" title="'. get_the_title( get_the_ID()).' louer gite" role="button" href="' . get_permalink( get_the_ID() ) . '">' . $titre .  '</a>';
+}
  
 ?>
