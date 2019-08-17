@@ -240,5 +240,32 @@ add_action( 'widgets_init', function () {
 );
 
 
+function bigpicture_change_and_link_excerpt( $more ) {
+	if ( is_admin() ) {
+		return $more;
+	}
+
+	// Change text, make it link, and return change
+	return '&hellip; <a href="' . get_the_permalink() . '"> ' . __( 'read more', 'bigpicture' ) . ' </a>';
+ }
+ add_filter( 'excerpt_more', 'bigpicture_change_and_link_excerpt', 999 );
+
+
+
+ function oldStyle_read_more($titre=null){
+
+    if($titre==null){
+
+        $titre = __( 'Lire la suite', 'bigpicture' );
+
+    }
+
+    
+    return '<a class="btn btn-oldstyle" title="'. get_the_title( get_the_ID()).' louer gite" role="button" href="' . get_permalink( get_the_ID() ) . '">' . $titre .  '</a>';
+
+}
+
+
+
 
 ?>
