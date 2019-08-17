@@ -10,15 +10,17 @@
     height: 60%;
     display: block;
     z-index: 10000;
-
+    
+    
+    
 }
 
 
 .dpTable {
 	font-size: 14px;
 	text-align: center;
-	color: darken($main-fonce-bigpicture, 20%);
-	background-color: $gris-pr-bigpicture;
+	color: darken($bleu-tx-artemise, 20%);
+	background-color: $gris-pr-artemise;
 	
         width: 100%; height: 100%;
         
@@ -27,10 +29,10 @@
         
 	}
 
-
+        
         
 .hoverTD{
-    background-color: darken($main-fonce-bigpicture, 20%);
+    background-color: darken($bleu-tx-artemise, 20%);
     cursor: pointer;
     color: white;      
 
@@ -46,14 +48,14 @@
   
    
 .buttonStyle{
-    background-color: $gris-btn-bigpicture;
-    border: 1px solid darken($gris-btn-bigpicture, 25%);
+    background-color: $gris-btn-artemise;
+    border: 1px solid darken($gris-btn-artemise, 25%);
     color: white;
     
 }
 .buttonStyleHover{
-    background-color: darken($gris-btn-bigpicture, 25%);
-    border: 1px solid darken($gris-btn-bigpicture, 45%);
+    background-color: darken($gris-btn-artemise, 25%);
+    border: 1px solid darken($gris-btn-artemise, 45%);
     color: white;
     
 }
@@ -109,7 +111,7 @@ font-weight: bold;
 border-radius: 2px;
   margin-top: 2px;
     padding: 15px 10px;
-  background-color: $vert-fonce-bigpicture;
+  background-color: #627D79;
 }
 .resa-toogle{
     cursor:pointer;
@@ -122,28 +124,41 @@ border-radius: 2px;
 }
 
 
+
+
+
+
+
+
 #formPicker {
     
-    color: $gris-pr-bigpicture;
+    color: $gris-pr-artemise;
     line-height: 2.6;
     
     input { 
         border-style: solid;
-        background-color: $gris-pr-bigpicture;
-        color :$main-fonce-bigpicture;
+        background-color: $gris-pr-artemise;
+        color :$bleu-pr-artemise;
         @include    border-top-radius(4px) ;
         @include    border-bottom-radius(4px) ;
     }
     
     select{
         border-style: solid;
-        background-color: $gris-pr-bigpicture;
-        color : $main-fonce-bigpicture;
+        background-color: $gris-pr-artemise;
+        color : $bleu-pr-artemise;
         width: 100%;
         
     }
     
-
+    
+    /*
+    input[type=submit]:disabled {
+        background-color: rgb(135, 152, 149);
+        border : none;
+        
+    
+}*/
 }
 
 

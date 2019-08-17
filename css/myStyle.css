@@ -688,4 +688,19 @@ button {
     width: 30%;
     height: auto; }
   #resa-responsive > span {
-    display: none; } }
+    display: none;
+  }
+}
+
+
+a {
+	color: #674e48;
+    font-size: large;
+}
+
+
+
+
+
+
+/*# sourceMappingURL=myStyle.css.map */
