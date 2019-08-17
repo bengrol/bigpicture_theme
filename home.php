@@ -2,7 +2,7 @@
 
    <section id="bandeau" class="" style="background-image: url('<?= getImageBandeau() ?>')"></section>
 
-    <!-- home-page -->
+    <!-- home-page archive blog -->
 <?php if (have_posts()) : ?>
     <div class="row content-area" id="content">
         <section class="col-md-offset-3 col-md-6">

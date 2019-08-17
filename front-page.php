@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<!-- front-page -->
+<!-- front-page page accueil-->
 
 <div id="primary" class="content-area ">
     <?php  echo do_shortcode('[metaslider title="slider accueil"]'); ?>
