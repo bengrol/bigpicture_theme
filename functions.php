@@ -331,5 +331,4 @@ function bigpicture_change_and_link_excerpt( $more ) {
     }
     return '<a class="btn btn-bigpicture" title="'. get_the_title( get_the_ID()).' louer gite" role="button" href="' . get_permalink( get_the_ID() ) . '">' . $titre .  '</a>';
 }
- 
 ?>
