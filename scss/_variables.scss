@@ -1,20 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic);
 $font-bigpicture: Lato, helvetica, arial, sans-serif;
 
-$main-fonce-bigpicture: #4a3834;
-$vert-fonce-bigpicture:  #9fb143;
-$rouge-pr-bigpicture: #9d4924;
-// $gris-pr-bigpicture: #dbe4e3;
-$gris-pr-bigpicture: lighten($vert-fonce-bigpicture , 30);
+$bleu-pr-bigpicture: #4a3834;
+$rouge-pr-bigpicture: #7a8852;
+$gris-pr-bigpicture: #b1c18c;
 
+$bleu-tx-bigpicture: #97c1bb;
+$gris-tx-bigpicture: #A39C94;
 
+$gris-btn-bigpicture: #CCCCCC;
 
-//$gris-tx-bigpicture: #A39C94;
-$gris-tx-bigpicture: darken($vert-fonce-bigpicture , 30);
-$gris-btn-bigpicture: lighten($main-fonce-bigpicture , 30);
-
+$fauchon-marron-clair-2 : #8f7d6d;
+$fauchon-marron-clair : #9d4924;
+$fauchon-vert : #7a8852; 
+$fauchon-vert-fonce: #5c821a;
 $height-resp : 100px;
-
 
 
 

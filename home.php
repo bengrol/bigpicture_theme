@@ -2,7 +2,7 @@
 
    <section id="bandeau" class="" style="background-image: url('<?= getImageBandeau() ?>')"></section>
 
-    <!-- home-page -->
+    <!-- home-page archive blog -->
 <?php if (have_posts()) : ?>
     <div class="row content-area" id="content">
         <section class="col-md-offset-3 col-md-6">
@@ -11,10 +11,10 @@
             <article>
 
                 <?php
-                the_title(sprintf('<a href="%s" rel="bookmark"><h1 class="titre-page">', esc_url(get_permalink())), '</h1></a>');	
-                   
-                
-                if ( has_post_thumbnail() ) {
+                the_title(sprintf('<a href="%s" rel="bookmark"><h1 class="titre-page">', esc_url(get_permalink())), '</h1></a>');
+              
+				
+				   if ( has_post_thumbnail() ) {
                         the_post_thumbnail('blog-article-sm-thumb');
                         }
                     ?>

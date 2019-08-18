@@ -5,29 +5,22 @@ Theme Name: bigpicture
 Description: Theme bigpicture
 Version: 1.0
 Text Domain: bigpicture
-
 */
 
 /* css wordpresse*/
-
 img.alignright { float: right; margin: 0 0 1em 1em; }
 img.alignleft { float: left; margin: 0 1em 1em 0; }
 img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
-
 /* css wordpresse fin*/
-
 
 html{
     overflow-x: hidden;
-
 }
 
-
 .tripadvisor-container{
-
     position: absolute;
     top: 0;
     right: -10%;
@@ -48,18 +41,11 @@ html{
     }
     &:hover{
         width: 252px;
-
     }
-    /*      div{
-              width: 240px;
-          }*/
-
 }
-
 .respon{
     width: 50%;
 }
-
 .im-resp-float-r{
     float : right;
     width: 50%;
@@ -68,48 +54,35 @@ html{
     float : left;
     width: 50%;
 }
-
 body{
     font:  $font-bigpicture;
     overflow-x: hidden;
     background-image: url('../images/bg.png');
 }
-
 a:hover{
     text-decoration: none;
 }
-
 header#main-header {
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
-    //overflow: hidden;
     color: #fff; 
-
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.25em 0.5em;
     @include border-radius(0 0 3px 3px);
-
     left: 50px; 
     width: 260px;
-
-
-
 }
-
 #main{
     width : 100%;
 }
-
-
 #logo-container, #main-nav-container{
-    background-color : lighten($main-fonce-bigpicture, 12%);
-
-    @include radial-gradient(circle at 50% 16% , lighten($main-fonce-bigpicture, 12%) 0%, $main-fonce-bigpicture 100%);
-
+    background-color : lighten($bleu-pr-bigpicture, 12%);
+    @include radial-gradient(circle at 50% 16% ,
+     lighten($fauchon-marron-clair-2, 12%) 0%,
+     $fauchon-marron-clair-2 100%);
 }
-
 aside {
     position: absolute;
     z-index: 50;
@@ -123,45 +96,30 @@ aside {
         display: block;
     }
 }
-.upper{
 
+.upper{
     text-transform: uppercase;
 }
 
-
 #content{
-
-
-
     p{
-
         color : $gris-tx-bigpicture;
         font-size: 1.2em;
-
-
     }
     article{
-
-
         section{
             margin-bottom: 5%;
         }
     }
-
-}
-.content-area{
-
-    //min-height: 400px;
 }
 
 .titre-page, .sec-prix{
-    //color: #759590;
-    color: $main-fonce-bigpicture;
+    color: $bleu-pr-bigpicture;
 }
+
 .titre-page{
     font-family: $font-bigpicture;
     font-size: 3.4em;
-
 }
 
 section{
@@ -170,81 +128,56 @@ section{
         font-family: $font-bigpicture;
         font-size: 1.2em;
     }
-
     .bd-ch{
         background-image: url('images/img-bandeau-ch-fl07.jpg');
     }
-
-
-
 }
 
 #bandeau{
     min-height: 320px; //230px
     background-repeat: no-repeat;
     background-size: cover;
-
     @include filter-blur( 2px);
-
 }
-
-
-
 
 #resa-container-close{
     @extend .transition-color-2s;
-
-
     &:hover, &:active{
         color : $gris-tx-bigpicture;
     }
-
 }
 
-
-
-#main-nav a:hover{ color: $main-fonce-bigpicture; }
+#main-nav a:hover{ color: $bleu-tx-bigpicture; }
 
 .btn-grp-offres, .btn-grp-offres-resp{
     a:hover, button:hover {
         color: #000;
-
     }
 
     a,  button{
-
         display: block;
         padding: .75em 1em;
         text-align: center;
         letter-spacing: 2px;
         text-transform: uppercase;
         @extend .transition-color-2s;
-        color: white;
+        color: #000;
         width: 100%;
         background-color: rgb(214, 47, 0);
     }
 
     a.linkvisite360{
         margin-top: 10px;
-        background-color: $main-fonce-bigpicture;
-    }
-    .btn-offre {
-        color : $main-fonce-bigpicture;
+        background-color: $gris-pr-bigpicture;
     }
     i{
         padding-right: 6px;
     }
-
-
 }
 
-button{
-
-    border: none;
-}
+button{    border: none; }
 
 .fontcustom{
-
     font-size: 2em;
 }
 
@@ -252,98 +185,72 @@ button{
     a {
         color : $gris-tx-bigpicture;
     }
-
     a:hover {
         color : darken($gris-tx-bigpicture , 15%);
     }
 }
 
-
-//.social-icon-set a:hover,  .price-info .sec-info a:hover{ color : darken($gris-tx-bigpicture , 15%); }
-
-
 .chambre-icon-set .row {
-
     div{
-
         display: inline-block;
         margin-left: 5%;
         margin-bottom: 2%;
         padding-bottom: 2%;
         width: 40%;
         border-bottom : 1px dotted #aaaaaa;
-
         i{
-            color : $vert-fonce-bigpicture;
+            color : $fauchon-vert;
             @extend .transition-color-2s;
             padding : 0 10%;
-
         }
-
         i:hover{
-            color : lighten($main-fonce-bigpicture, 10%);
+            color : lighten($fauchon-vert, 10%);
         }
-
     }
-
-
-
 }
 
-
 .price-info {
-
     .sec-info{
-
         text-align: center;
-
         a{
             font-size: 0.7em;
         }
     }
-
 }
 
 .btn-offre{	
     background-image: linear-gradient( lighten($gris-pr-bigpicture , 10%), $gris-pr-bigpicture);
-    color: $main-fonce-bigpicture;
+    color: #000;
 }
-.btn-event, footer{
-    background-color : lighten($main-fonce-bigpicture, 10%);
-    background-image: linear-gradient(#696643, #4a482f);
+footer{
+    background-color : lighten($fauchon-marron-clair-2, 10%);
+    background-image: linear-gradient(lighten($fauchon-marron-clair-2 , 10%), $fauchon-marron-clair-2);
+}
+.btn-event{
+    background-image: linear-gradient(lighten($fauchon-vert , 10%), $fauchon-vert);
 }
 .btn-resa{
-    background-image: linear-gradient(lighten($rouge-pr-bigpicture , 10%), $rouge-pr-bigpicture);
+    background-image: linear-gradient(lighten($fauchon-vert-fonce , 10%), $fauchon-vert-fonce);
 }
-
-
 
 @-webkit-keyframes greenPulse {
-    from { background-color: $rouge-pr-bigpicture; -webkit-box-shadow: 0 0 9px #333; }
-    50% { background-color: lighten($rouge-pr-bigpicture, 30%); -webkit-box-shadow: 0 0px 22px darken($rouge-pr-bigpicture, 30%); }
-    to { background-color: $rouge-pr-bigpicture; -webkit-box-shadow: 0 0 9px #333; }
+    from { background-color: $fauchon-vert; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: lighten($fauchon-vert, 30%); -webkit-box-shadow: 0 0px 22px darken($fauchon-vert, 30%); }
+    to { background-color: $fauchon-vert; -webkit-box-shadow: 0 0 9px #333; }
 }
 
-
-
 #menu-header {
-
-    @extend .btn-resa;
+    background-image: linear-gradient(lighten($fauchon-vert , 10%), $fauchon-vert);
     width: 100%;
     height: 50px;
     font-weight: bold;
     padding: 15px 0;
     font-size: 1.2em;
     @extend .transition-color-2s;
-
-
 }
 
 .boxpulse{
-    @include boxPulse($rouge-pr-bigpicture);
-
-
-
+    @include boxPulse($fauchon-vert);
 }
 
 #menu-header:hover{
@@ -355,13 +262,10 @@ button{
 .slider{
     width: 100%;
     height: 100%;
-
     background-size: cover;
-
 }
 
 #img-logo{
-
     margin: 20px 0;
     width  : 90%;
 }
@@ -369,34 +273,35 @@ button{
 .img-pt-logo{
     width: 45%;
     margin : 5px 0;
-
 }
 
 .link-lang{
     box-sizing: border-box;
     padding: 15px;
     width: 50%;
-    float: left;
     display: inline-block;
-
 }
-
 
 #main-nav-container{
     width: 100%;
     display: none;
-
 }
 
 .transition-color-2s{
     @include transition-color(0.5s);
 }
 
-
 .link-lang{
     display: inline-block;
     color: #fff ;
     @extend .transition-color-2s;
+}
+.menu-lang-container{
+    ul{
+        display: flex;
+        flex-direction : row;
+        justify-content: center;
+    }
 }
 
 #main-nav , .menu-lang-container{
@@ -429,24 +334,16 @@ button{
 }
 
 .menu-lang-container{
-
-    // background: radial-gradient(circle at 41% 337%, #6e534d 62%, #4a3834 94%);
-
-    @include radial-gradient(circle at 41% 337% , lighten($main-fonce-bigpicture,  62%) 0%, $main-fonce-bigpicture 94%);
-    
+    background-color: #809c98;
     width: 100%;
     height: auto;
-
-    ul.menu{
-        display: inherit;
-    }
-}
+    @include radial-gradient(circle at 50% 16% ,
+     lighten($fauchon-marron-clair-2, 12%) 0%,
+     $fauchon-marron-clair-2 100%);}
 
 #metaslider_18{
     margin: 0px;   
-
 }
-
 
 .border-top-radius{
     @include border-top-radius(3px);
@@ -454,11 +351,9 @@ button{
 }
 .border-bottom-radius{
     @include border-bottom-radius(6px);
-
 }
 
 .header-colipsable{
-
     @extend .border-top-radius;
     cursor: pointer;
     padding: 3px 10px;
@@ -484,20 +379,13 @@ button{
     span{
         float: right;
     }
-
-
-
-
-
 }
 
 .overlay{
-
     &:hover{
         opacity: 0.2;
     }
     @extend .border-top-radius;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -509,43 +397,30 @@ button{
     color: #fff;
 }
 
-
-
 .art-chambre {
-
     position : relative;
     margin: 30px 0;
-
-
     section{
         @extend .border-bottom-radius;
         background-color: #fff;
         background-color: #F2F4F4;
         padding: 20px 10px;
         color : $gris-tx-bigpicture;
-
         span{
             display: block;   
         }
-
     }
 }
 
-
-
 .dShadow, .wp-easy-gallery{
     width: 100%; height: auto;
-
 }
 
 .cgv{
-
     text-align: center;
     line-height: 0.9em;
     padding: 2%;
 }
-
-
 
 #footer-row{
     z-index: 100;
@@ -553,29 +428,21 @@ button{
     padding-top: 20px;
     text-align: center;
     @extend .redBorder;
-
-    .footer-logo{
-
-    }
-
     a, p{
         color : #fff;
         @extend .transition-color-2s;
     }
     a:hover{
-        color : $main-fonce-bigpicture;
+        color : $bleu-tx-bigpicture;
     }
-
     .link-footer{
         list-style-type: none;
-
     }
 }
 
 .redBorder{
-    border-top: solid 9px $vert-fonce-bigpicture;
+    border-top: solid 9px $fauchon-vert;
 }
-
 
 #responsive{
     display : none;
@@ -590,8 +457,6 @@ button{
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
-
-
 }
 .loremipsum{
     content: "jn ijn ijn i jn ijn i jn ij ni jn ij ni jn ijnijn ijn ijn"
@@ -606,14 +471,12 @@ button{
     height: 100%;
     position: absolute;
     top: 0;
-
     z-index: 1000;
     background: rgb(219, 228, 227);
     background-image: url('../images/gif/loader.gif');
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 #closeIframe{
     position: fixed;
@@ -626,9 +489,7 @@ button{
 }
 
 .visite360HD{
-
     iframe{
-
         position: fixed;
         top: 0%;
         left: 0%;
@@ -644,11 +505,7 @@ button{
             width: 90%;
             height: 100%;
             z-index: 99;
-
-
-        }
+        }    
     }
-
 }
-
 @import "_media.scss";

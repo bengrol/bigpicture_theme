@@ -32,7 +32,6 @@ get_header(); ?>
     </div><!-- content-area -->
       
 </div>  
-    
 
 
     <?php get_footer(); ?>

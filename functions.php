@@ -118,9 +118,8 @@ function bigpicture_scripts_styles() {
 	
     // styles
     wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style( 'bigpicture-style', get_template_directory_uri().'/css/bootstrap.css' , array(), null );
-    wp_enqueue_style( 'bigpicture-map', get_template_directory_uri().'/css/myStyle.css.map' , array(), null );
-    wp_enqueue_style( 'bigpicture-style-map', get_template_directory_uri().'/css/bootstrap.css.map' , array(), null );
+    wp_enqueue_style( 'bigpicture-bootstrap', get_template_directory_uri().'/css/bootstrap.css' , array(), null );
+    wp_enqueue_style( 'bigpicture-style', get_template_directory_uri().'/css/myStyle.css' , array(), null );
     wp_enqueue_style( 'bigpicture-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' , array(), null );
     wp_enqueue_style( 'custom-font', get_template_directory_uri().'/fonts/fontcustom.css' , array(), null );
 
@@ -204,7 +203,7 @@ register_nav_menus(array(
 
 /* chargement des traductions */
 load_theme_textdomain('bigpicture', get_template_directory().'/languages');
-add_theme_support( 'post-thumbnails' );
+ add_theme_support( 'post-thumbnails' );
 
 
 
@@ -246,85 +245,91 @@ function bigpicture_change_and_link_excerpt( $more ) {
  }
  add_filter( 'excerpt_more', 'bigpicture_change_and_link_excerpt', 999 );
 
-add_action( 'add_meta_boxes_page', 'bigpicture_meta_boxes' );
+ add_action( 'add_meta_boxes_page', 'bigpicture_meta_boxes' );
 
-function bigpicture_meta_boxes($post){
-
-    $page_template = get_post_meta($post->ID, '_wp_page_template', true);
-
-    if('page-slider.php' == $page_template) {   
-    add_meta_box(
-        'bigpicture-meta-boxe-slide', // Metabox HTML ID attribute
-        __('Slider d\'id'), // Metabox title
-        'bigpicture_slider_render_meta_box', // callback name
-        'page', // post type
-        'side', // context (advanced, normal, or side)
-        'default' // priority (high, core, default or low)
-    );
-}
-};
-
-function bigpicture_slider_render_meta_box(){
-    global $post;
-    $v= get_post_meta($post->ID, '_bigpicture-meta-slider-home-page', true);
-
-    $loopSlider = new WP_Query( array( 
-        'post_type' => 'ml-slider',
-        'posts_per_page' => -1) );
-    
-    if($loopSlider->post_count>=1):
-    ?>
-        <select name="_bigpicture-meta[_bigpicture-meta-slider-home-page]">
-            <option value="null" >pas de slider</option>
-    <?php
-
-        while ( $loopSlider->have_posts() ) : $loopSlider->the_post(); 
-            $titre = get_the_title();
-            $idSlider = get_the_ID();
-    ?>
-        <option value="<?=$idSlider?>" <?= $v == $idSlider ? "selected":"" ?>><?=$titre?></option>
-    <?php 
-        endwhile; 
-    ?>
-        </select >
-    <?php
-    else:
-    ?>    
-        <p>Aucun Slider disponible</p>
-    <?php    
-    endif;
-    wp_reset_query();
-}
-
-function bigpicture_save_custom_post_meta() {
-
-    global $post;
-
-    if (!current_user_can('edit_post', $post->ID)) {
-        return $post->ID;
+ function bigpicture_meta_boxes($post){
+ 
+     $page_template = get_post_meta($post->ID, '_wp_page_template', true);
+ 
+     if('page-slider.php' == $page_template) {   
+     add_meta_box(
+         'bigpicture-meta-boxe-slide', // Metabox HTML ID attribute
+         __('Slider d\'id'), // Metabox title
+         'bigpicture_slider_render_meta_box', // callback name
+         'page', // post type
+         'side', // context (advanced, normal, or side)
+         'default' // priority (high, core, default or low)
+     );
+ }
+ };
+ 
+ function bigpicture_slider_render_meta_box(){
+     global $post;
+     $v= get_post_meta($post->ID, '_bigpicture-meta-slider-home-page', true);
+ 
+     $loopSlider = new WP_Query( array( 
+         'post_type' => 'ml-slider',
+         'posts_per_page' => -1) );
+     
+     if($loopSlider->post_count>=1):
+     ?>
+         <select name="_bigpicture-meta[_bigpicture-meta-slider-home-page]">
+             <option value="null" >pas de slider</option>
+     <?php
+ 
+         while ( $loopSlider->have_posts() ) : $loopSlider->the_post(); 
+             $titre = get_the_title();
+             $idSlider = get_the_ID();
+     ?>
+         <option value="<?=$idSlider?>" <?= $v == $idSlider ? "selected":"" ?>><?=$titre?></option>
+     <?php 
+         endwhile; 
+     ?>
+         </select >
+     <?php
+     else:
+     ?>    
+         <p>Aucun Slider disponible</p>
+     <?php    
+     endif;
+     wp_reset_query();
+ }
+ 
+ function bigpicture_save_custom_post_meta() {
+ 
+     global $post;
+ 
+     if (!current_user_can('edit_post', $post->ID)) {
+         return $post->ID;
+     }
+ 
+     if (isset($_POST['_bigpicture-meta'])) {
+         $OldStyleMeta = $_POST['_bigpicture-meta'];
+ 
+         foreach ($OldStyleMeta as $key => $value) {
+             if ($post->post_type == 'revision')
+                 return; // Don't store custom data twice
+             $value = implode(',', (array) $value); // If $value is an array, make it a CSV (unlikely)
+             if (get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+                 update_post_meta($post->ID, $key, $value);
+             } else { // If the custom field doesn't have a value
+                 add_post_meta($post->ID, $key, $value);
+             }
+             if (!$value)
+                 delete_post_meta($post->ID, $key); // Delete if blank
+         }
+     }
+ }
+ 
+ add_action( 'publish_page', 'bigpicture_save_custom_post_meta' );
+ add_action( 'draft_page', 'bigpicture_save_custom_post_meta' );
+ add_action( 'future_page', 'bigpicture_save_custom_post_meta' );
+ 
+ function bigpicture_read_more($titre=null){
+    if($titre==null){
+        $titre = __( 'Lire la suite', 'bigpicture' );
     }
-
-    if (isset($_POST['_bigpicture-meta'])) {
-        $OldStyleMeta = $_POST['_bigpicture-meta'];
-
-        foreach ($OldStyleMeta as $key => $value) {
-            if ($post->post_type == 'revision')
-                return; // Don't store custom data twice
-            $value = implode(',', (array) $value); // If $value is an array, make it a CSV (unlikely)
-            if (get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
-                update_post_meta($post->ID, $key, $value);
-            } else { // If the custom field doesn't have a value
-                add_post_meta($post->ID, $key, $value);
-            }
-            if (!$value)
-                delete_post_meta($post->ID, $key); // Delete if blank
-        }
-    }
+    return '<a class="btn btn-bigpicture" title="'. get_the_title( get_the_ID()).' louer gite" role="button" href="' . get_permalink( get_the_ID() ) . '">' . $titre .  '</a>';
 }
-
-add_action( 'publish_page', 'bigpicture_save_custom_post_meta' );
-add_action( 'draft_page', 'bigpicture_save_custom_post_meta' );
-add_action( 'future_page', 'bigpicture_save_custom_post_meta' );
-
-
+ 
 ?>

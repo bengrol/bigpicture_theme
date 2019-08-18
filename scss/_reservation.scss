@@ -1,6 +1,5 @@
 @import "_variables.scss";
 
-
 .dpDiv{
     visibility: visible;
     position: absolute;
@@ -10,141 +9,100 @@
     height: 60%;
     display: block;
     z-index: 10000;
-
 }
-
 
 .dpTable {
 	font-size: 14px;
 	text-align: center;
-	color: darken($main-fonce-bigpicture, 20%);
+	color: darken($bleu-tx-bigpicture, 20%);
 	background-color: $gris-pr-bigpicture;
-	
-        width: 100%; height: 100%;
-        
-        @include border-top-radius(5px);
+	width: 100%; height: 100%;
+    @include border-top-radius(5px);
     @include border-bottom-radius(5px);
-        
-	}
-
-
-        
+}
 .hoverTD{
-    background-color: darken($main-fonce-bigpicture, 20%);
+    background-color: darken($bleu-tx-bigpicture, 20%);
     cursor: pointer;
     color: white;      
-
 }   
-
 .dpTD {
 	border: 1px solid #ece9d8;
 }
-
 .dpTD:Hover {
     @extend .hoverTD;
 }
-  
-   
 .buttonStyle{
     background-color: $gris-btn-bigpicture;
     border: 1px solid darken($gris-btn-bigpicture, 25%);
     color: white;
-    
 }
 .buttonStyleHover{
     background-color: darken($gris-btn-bigpicture, 25%);
     border: 1px solid darken($gris-btn-bigpicture, 45%);
-    color: white;
-    
+    color: white;  
 }
 .dpDayHighlightTD {
     @extend .buttonStyle;
     border: none ; 
-
 }
 .dpDayHighlightTD:hover{
     @extend .hoverTD;
 }
-        
-
 .dpDayTD {
-@extend .buttonStyle;	
-        width: (100%/7);
-	}
+    @extend .buttonStyle;	
+    width: (100%/7);
+}
 .dpTitleText {
 	font-size: 17px;
 	color: gray;
 	font-weight: bold;
-	}
+}
 .dpDayHighlight {
 	color: #000;
 	font-weight: bold;
-	}
-        
+}
 .dpButton {
     padding: 0px;
     @extend .dpTodayButton;
 }
-
 .dpButton:hover {
     @extend .buttonStyleHover;
 }
-
-
-
 .dpTodayButton {
     @extend .buttonStyle;
     width: 48%;
-font-size: 17px;
-font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
 }
-
 .dpTodayButton:hover{
     @extend .buttonStyleHover;
-}
-        
+}     
 .resa-container{
-   display : none;
-    
-border-radius: 2px;
-  margin-top: 2px;
+    display : none;
+    border-radius: 2px;
+    margin-top: 2px;
     padding: 15px 10px;
-  background-color: $vert-fonce-bigpicture;
+    background-color: #627D79;
 }
-.resa-toogle{
-    cursor:pointer;
-    
-}
-
+.resa-toogle{ cursor:pointer;}
 .img-calendar{
     float: left; margin-right: 10px;
     width:30px;
 }
-
-
 #formPicker {
-    
     color: $gris-pr-bigpicture;
     line-height: 2.6;
-    
     input { 
         border-style: solid;
         background-color: $gris-pr-bigpicture;
-        color :$main-fonce-bigpicture;
+        color :$bleu-pr-bigpicture;
         @include    border-top-radius(4px) ;
         @include    border-bottom-radius(4px) ;
     }
-    
     select{
         border-style: solid;
         background-color: $gris-pr-bigpicture;
-        color : $main-fonce-bigpicture;
-        width: 100%;
-        
+        color : $bleu-pr-bigpicture;
+        width: 100%;        
     }
-    
-
 }
-
-
-

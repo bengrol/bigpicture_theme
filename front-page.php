@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<!-- front-page -->
+<!-- front-page page accueil-->
 
 <div id="primary" class="content-area ">
     <?php  echo do_shortcode('[metaslider title="slider accueil"]'); ?>
@@ -25,7 +25,40 @@ get_header(); ?>
             <?php endwhile;
         endif;
         ?>
-    </div><!-- content-area -->
+   
+	
+	            
+        <?php /* archive de page */
+			$temp = 'chambres';
+			$args = array( 
+			'post_type' => $temp,
+			'posts_per_page' => 4,
+			'meta_key'   => '_post-type-chambre-encart',  // toute les chambres ayant un prix 
+			'meta_value' => 'oui'        
+			);
 
+			$loop = new WP_Query( $args );
+		?>
+    
+    
+    <article class="art-encart">
+        <H2 style="text-align: center;" ><?php _e('Location de maisons de vacances du domaine de Puychene', 'bigpicture'); ?></H2>
+         <?php
+
+     while ( $loop->have_posts() ) : $loop->the_post(); 
+        
+
+     get_template_part( 'content', $temp.'-simple' );
+
+     endwhile; wp_reset_query();       
+     ?>
+  
+    
+    </article>
+
+	
+	 </div><!-- content-area -->
+
+	
 </div>
 <?php get_footer(); ?>
