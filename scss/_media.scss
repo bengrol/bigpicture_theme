@@ -9,7 +9,11 @@
 
 @media only screen and (max-width: 1000px) and (min-width: 0em){
     .menu-lang-container{
-        display: none;
+        float: left;
+        width: 200px;
+        position: relative;
+        top: -10px;
+        background: transparent;
     }
     
     #bandeau{

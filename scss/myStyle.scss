@@ -354,7 +354,7 @@ footer{
 }
 
 .menu-lang-container{
-    background-color: #809c98;
+    background-color: $fauchon-marron-clair-2;
     width: 100%;
     height: auto;
     @include radial-gradient(circle at 50% 16% ,
@@ -375,7 +375,7 @@ footer{
 
 .header-single-room {
     @extend .header-colipsable;
-    background-color: #7a8852;
+    background-color: $fauchon-vert;
     cursor: default !important;
 }
 
