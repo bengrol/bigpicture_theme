@@ -82,7 +82,7 @@
     border-radius: 2px;
     margin-top: 2px;
     padding: 15px 10px;
-    background-color: #627D79;
+    background-color: $fauchon-vert-fonce;
 }
 .resa-toogle{ cursor:pointer;}
 .img-calendar{
@@ -94,14 +94,14 @@
     line-height: 2.6;
     input { 
         border-style: solid;
-        background-color: $gris-pr-bigpicture;
+        background-color: white;
         color :$bleu-pr-bigpicture;
         @include    border-top-radius(4px) ;
         @include    border-bottom-radius(4px) ;
     }
     select{
         border-style: solid;
-        background-color: $gris-pr-bigpicture;
+        background-color: white;
         color : $bleu-pr-bigpicture;
         width: 100%;        
     }

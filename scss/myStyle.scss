@@ -20,6 +20,18 @@ html{
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, a {
+    color: $fauchon-vert;
+}
+
+a{
+    font-weight: bold;
+
+    &:hover{
+        color: darken($fauchon-vert, 20%);
+    }
+}
+
 .tripadvisor-container{
     position: absolute;
     top: 0;
@@ -114,7 +126,8 @@ aside {
 }
 
 .titre-page, .sec-prix{
-    color: $bleu-pr-bigpicture;
+    color: $fauchon-vert;
+
 }
 
 .titre-page{
@@ -149,10 +162,13 @@ section{
 
 #main-nav a:hover{ color: $bleu-tx-bigpicture; }
 
+
+
 .btn-grp-offres, .btn-grp-offres-resp{
     a:hover, button:hover {
         color: #000;
     }
+
 
     a,  button{
         display: block;
@@ -161,10 +177,15 @@ section{
         letter-spacing: 2px;
         text-transform: uppercase;
         @extend .transition-color-2s;
-        color: #000;
+        color: white;
         width: 100%;
         background-color: rgb(214, 47, 0);
     }
+
+    a.btn-offre{
+        color: #000;
+    }
+
 
     a.linkvisite360{
         margin-top: 10px;
@@ -377,6 +398,7 @@ footer{
         display: inline-block;
     }
     h1{
+        color: white;
         margin: 0.7em 0;
     }
     span{
