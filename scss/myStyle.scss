@@ -312,7 +312,6 @@ footer{
         list-style-type: none;
         padding-left: 1px;
         li {
-            padding :10px 0px;
             a {
                 font-size: inherit;
                 padding: .5em 1em;
@@ -353,6 +352,12 @@ footer{
     @include border-bottom-radius(6px);
 }
 
+.header-single-room {
+    @extend .header-colipsable;
+    background-color: #7a8852;
+    cursor: default !important;
+}
+
 .header-colipsable{
     @extend .border-top-radius;
     cursor: pointer;
@@ -368,10 +373,8 @@ footer{
     h1, span{
         z-index: 40;
         position: inherit;
-        // font-weight: bold;
         text-shadow: rgba(0, 0, 0, 0.156863) 2px 2px;
         display: inline-block;
-
     }
     h1{
         margin: 0.7em 0;
@@ -472,7 +475,7 @@ footer{
     position: absolute;
     top: 0;
     z-index: 1000;
-    background: rgb(219, 228, 227);
+    background: $gris-pr-bigpicture;
     background-image: url('../images/gif/loader.gif');
     background-repeat: no-repeat;
     background-position: center;

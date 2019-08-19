@@ -13,7 +13,6 @@ get_header(); ?>
     
         <div class="row">
             <section id="bandeau" class="" style="background-image: url('<?= getImageBandeau() ?>')">
-
             </section>
         </div>
         <div class="row content-area" id="content">

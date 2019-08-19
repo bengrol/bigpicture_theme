@@ -95,11 +95,8 @@ function getVisite360($post_type){
 
 function getGallery($post_type){
     $post_type_gallery = "_gallery-".$post_type;
-    
     $gallery = get_post_meta(get_the_ID(), $post_type_gallery, true);
-    
     $thumb = get_the_post_thumbnail(get_the_ID(), 'mediem');
-    
     
 if ($gallery) {
         return do_shortcode(get_post_meta(get_the_ID(), '_gallery-chambre', true));
