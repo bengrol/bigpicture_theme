@@ -205,12 +205,11 @@ button{    border: none; }
 .social-icon-set , .price-info .sec-info {
     a {
         color : $gris-tx-bigpicture;
-    }
-    a:hover {
-        color : darken($gris-tx-bigpicture , 15%);
+        &:hover {
+            color : darken($gris-tx-bigpicture , 15%);
+        }
     }
 }
-
 .chambre-icon-set .row {
     div{
         display: inline-block;
@@ -223,10 +222,11 @@ button{    border: none; }
             color : $fauchon-vert;
             @extend .transition-color-2s;
             padding : 0 10%;
-        }
-        i:hover{
-            color : lighten($fauchon-vert, 10%);
-        }
+            
+            &:hover{
+                color : lighten($fauchon-vert, 10%);
+            }
+        }        
     }
 }
 
@@ -338,6 +338,10 @@ footer{
                 padding: .5em 1em;
                 width: 100%;
                 @extend .link-lang;
+
+                &:hover{
+                    color: $bleu-tx-bigpicture;
+                }
             }
         }
     }

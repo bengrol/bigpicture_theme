@@ -14,7 +14,7 @@
 .dpTable {
   font-size: 14px;
   text-align: center;
-  color: #5a988f;
+  color: #0f1506;
   background-color: #b1c18c;
   width: 100%;
   height: 100%;
@@ -32,7 +32,7 @@
   border-bottom-right-radius: 5px; }
 
 .hoverTD, .dpTD:Hover, .dpDayHighlightTD:hover {
-  background-color: #5a988f;
+  background-color: #0f1506;
   cursor: pointer;
   color: white; }
 
@@ -272,7 +272,7 @@ section .bd-ch {
   color: #A39C94; }
 
 #main-nav a:hover {
-  color: #97c1bb; }
+  color: #49641d; }
 
 .btn-grp-offres a:hover, .btn-grp-offres button:hover, .btn-grp-offres-resp a:hover, .btn-grp-offres-resp button:hover {
   color: #000; }
@@ -305,9 +305,8 @@ button {
 
 .social-icon-set a, .price-info .sec-info a {
   color: #A39C94; }
-
-.social-icon-set a:hover, .price-info .sec-info a:hover {
-  color: #7e766c; }
+  .social-icon-set a:hover, .price-info .sec-info a:hover {
+    color: #7e766c; }
 
 .chambre-icon-set .row div {
   display: inline-block;
@@ -319,8 +318,8 @@ button {
   .chambre-icon-set .row div i {
     color: #7a8852;
     padding: 0 10%; }
-  .chambre-icon-set .row div i:hover {
-    color: #95a469; }
+    .chambre-icon-set .row div i:hover {
+      color: #95a469; }
 
 .price-info .sec-info {
   text-align: center; }
@@ -439,6 +438,8 @@ footer {
       font-size: inherit;
       padding: .5em 1em;
       width: 100%; }
+      #main-nav ul li a:hover, .menu-lang-container ul li a:hover {
+        color: #49641d; }
   #main-nav #menu-lang, .menu-lang-container #menu-lang {
     display: inline-block;
     margin: 0;
@@ -545,7 +546,7 @@ footer {
   #footer-row a, #footer-row p {
     color: #fff; }
   #footer-row a:hover {
-    color: #97c1bb; }
+    color: #49641d; }
   #footer-row .link-footer {
     list-style-type: none; }
 
