@@ -147,8 +147,9 @@ section{
     }
 }
 
-#main-nav a:hover{ color: $bleu-tx-bigpicture; }
-
+#main-nav , #menu-lang-container{
+    a:hover{ color: $bleu-tx-bigpicture; }
+}
 .btn-grp-offres, .btn-grp-offres-resp{
     a:hover, button:hover {
         color: #000;
