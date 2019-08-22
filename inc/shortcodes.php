@@ -30,14 +30,6 @@ add_shortcode('hdMediaGallery', function ($param) {
         case 2:
             $rtn = hdMediaGetIFrame($url);
             break;
-        
-//        case 3:
-//            $rtn = hdMediaGetPanoramique($url, $id);
-//            break;
-//        case 4:
-//            $rtn = hdMediaGetMini($url);
-//            break;
-        
         default:
             $rtn = hdMediaGetLink($url);
             break;
@@ -52,32 +44,11 @@ add_shortcode('hdMediaGallery', function ($param) {
 
 
 function hdMediaGetLink($param){
-    return  "<a target='_blank' class='linkvisite360' href='$param' > visite-virtuelle </a>";
+    return  "<a target='_blank' class='linkvisite360' href='$param' > ".__('visite-virtuelle', 'bigpicture')." </a>";
 }
 function hdMediaGetIFrame($param){
     
     return "<div class='embed-responsive embed-responsive-16by9'><iframe src='$param' class='embed-responsive-item' scrolling=no frameborder=0> </iframe><br/></div>";
 }
 
-
-//
-//function hdMediaGetPanoramique($param, $id){// not used
-//    return "<div class='visite360HD' data-url='$param' data-visiteid='$id' "
-//            . "style='background-image:url(http://fr-olivier-gros.hdmedia.fr/360/cbpLcpFBh/prints/photo97586_crop_800.jpg);background-repeat:no- repeat;'>"
-//            . "<img class='logoload360' style='position:relative;min-left:240px;top:-10px;cursor:pointer' src='http://www.hdmedia.fr/images/visites/bouton_chargevisite.png'/>"
-//            . "</div>";
-//}
-//function hdMediaGetMini($param){
-//    return "";
-//}
-
 ?>
-
-
-
-
-
-
-
-
-

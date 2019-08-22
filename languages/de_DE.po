@@ -32,7 +32,7 @@ msgstr "Doppelbett"
 
 #: content-chambres.php:24
 msgid "Personnes"
-msgstr "menschen"
+msgstr "Menschen"
 
 #: content-chambres.php:28
 msgid "coffre fort"
@@ -64,7 +64,7 @@ msgstr "Allgemeine Verkaufsbedingungen"
 
 #: header.php:94
 msgid "offres Speciales"
-msgstr ""
+msgstr "Sonderangebote"
 
 #: header.php:95
 msgid "Actualités"
@@ -117,3 +117,35 @@ msgstr "bei %s &euro; "
 #: fonctions.php:245
 msgid "read_more"
 msgstr "lesen Sie mehr"
+
+#: fonctions.php:36
+msgid "semaine"
+msgstr "woche"
+
+msgid "visite-virtuelle"
+msgstr "virtual-tour"
+
+
+msgid "A partir de %s&euro; /semaine"
+msgstr "Von %s&euro; /week "
+
+msgid "%s /semaine"
+msgstr "%s /week"
+
+msgid "Location de maisons de vacances du domaine de Puychene"
+msgstr "Holiday houses rentals in Domaine de Puychêne"
+
+msgid "Louer %s"
+msgstr "Mieten %s"
+
+msgid "visite 360"
+msgstr "Besuchen Sie 360"
+
+msgid "piscine"
+msgstr "pool"
+
+msgid "parking"
+msgstr "parkplatz"
+
+msgid "wifi"
+msgstr "wi-fi"

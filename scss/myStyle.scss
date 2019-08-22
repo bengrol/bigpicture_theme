@@ -125,6 +125,19 @@ aside {
     }
 }
 
+.content-detail-chambre{
+
+    a.btn-bigpicture{
+
+        width: 100%;
+        margin-bottom: 10px;
+        background: #a8b851;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 .titre-page, .sec-prix{
     color: $fauchon-vert;
 

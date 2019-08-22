@@ -30,7 +30,7 @@
         </h3>
         <span class="detail-header">
             <?php 
-if(!empty($listePrix)){
+            if(!empty($listePrix)){
                 if(min($listePrix)!= max($listePrix)){
                     printf( __( 'A partir de %s&euro; /semaine', 'bigpicture' ), min($listePrix) );
                 }  else {
@@ -38,13 +38,10 @@ if(!empty($listePrix)){
                 }
             }
             ?>
-            
-            
         </span>
 
         <div class="content-detail-chambre">
-            <p><?php // echo get_truncate_content(20); ?></p>
-            <div><?= bigpicture_read_more(sprintf(__( 'Louer %s', 'bigpicture' ), get_the_title()));?></div>
+            <?= bigpicture_read_more(sprintf(__( 'Louer %s', 'bigpicture' ), get_the_title()));?>
         </div>
         <?= getGallery('chambre', 'archives'); ?>
     </div>

@@ -24,17 +24,32 @@ function getPriceRange(){
     global $post ;
     
     $prixbas = get_post_meta($post->ID, '_prix-bas-chambre', true);
-    $prixhaut = get_post_meta($post->ID, '_prix-chambre', true);
+    $bigpictureEncartPostTypeChambre = [];
+    for( $i = 1; $i < 5; $i++){
+
+        $bigpictureEncartPostTypeChambre[] = get_post_meta($post->ID, '_prix-chambre-periode' . $i, true);
+    }
+
+    sort($bigpictureEncartPostTypeChambre);
+
+    // $prixhaut = get_post_meta($post->ID, '_prix-chambre', true);
         
-    if(isset($prixbas) && $prixbas!=0){
+    // if(isset($prixbas) && $prixbas!=0){
+    //     printf(__('de %s &euro; ', 'bigpicture').' '
+    //             .__('à %s &euro; ', 'bigpicture').' '
+    //             .__('semaine', 'bigpicture'), $prixbas, $prixhaut );
+    
+    // }
+    // else{
+    //     print( $prixhaut.' &euro; /').__('semaine', 'bigpicture');
+    // }
+
         printf(__('de %s &euro; ', 'bigpicture').' '
                 .__('à %s &euro; ', 'bigpicture').' '
-                .__('jour', 'bigpicture'), $prixbas, $prixhaut );
-    
-    }
-    else{
-        print( $prixhaut.' &euro; /').__('jour', 'bigpicture');
-    }
+                .__('semaine', 'bigpicture'), current($bigpictureEncartPostTypeChambre), end($bigpictureEncartPostTypeChambre) );
+
+
+//    var_dump($bigpictureEncartPostTypeChambre);
     
 }
 

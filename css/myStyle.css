@@ -243,6 +243,14 @@ aside {
 #content article section {
   margin-bottom: 5%; }
 
+.content-detail-chambre a.btn-bigpicture {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #a8b851;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 .titre-page, .sec-prix {
   color: #7a8852; }
 

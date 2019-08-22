@@ -16,104 +16,135 @@ msgstr ""
 # This file is distributed under the GNU General Public License v2 or later.
 #: content-chambres.php:17
 msgid "chambre"
-msgstr ""
+msgstr "room"
 
 #: content-chambres.php:18
 msgid "suite"
-msgstr ""
+msgstr "suite"
 
 #: content-chambres.php:16
 msgid "jour"
-msgstr ""
+msgstr "day"
 
 #: content-chambres.php:23
 msgid "Lit Double"
-msgstr ""
+msgstr "Double bed"
 
 #: content-chambres.php:24
 msgid "Personnes"
-msgstr ""
+msgstr "People"
 
 #: content-chambres.php:28
 msgid "coffre fort"
-msgstr ""
+msgstr "safe"
 
 #: content-chambres.php:31
 msgid "Douche et Bain"
-msgstr ""
+msgstr "Shower and bath"
 
 #: content-chambres.php:32
 msgid "coin salon"
-msgstr ""
+msgstr "living room"
 
 #: content-chambres.php:35
 msgid "Ecran plat"
-msgstr ""
+msgstr "Flat screen"
 
 #: content-chambres.php:36
 msgid "Clim"
-msgstr ""
+msgstr "Air conditioner"
 
 #: content-chambres.php:65
 msgid "Reserver"
-msgstr ""
+msgstr "Book"
 
 #: content-chambres.php:70
 msgid "Conditions Generales de Vente"
-msgstr ""
+msgstr "Terms of Sales"
 
 #: header.php:94
 msgid "offres Speciales"
-msgstr ""
+msgstr "special offers"
 
 #: header.php:95
 msgid "Actualités"
-msgstr ""
+msgstr "News"
 
 #: footer.php:8
 msgid "contact"
-msgstr ""
+msgstr "contact"
 
 #: footer.php:9
 msgid "mentions legales"
-msgstr ""
+msgstr "legal notice"
 
 #: footer.php:10
 msgid "acces"
-msgstr ""
+msgstr "acces"
 
 #: footer.php:18
 msgid "site"
-msgstr ""
+msgstr "site"
 
 #: footer.php:19
 msgid "site map"
-msgstr ""
+msgstr "site map"
 
 #: partial-reservation.php:20
 msgid "Arrivee"
-msgstr ""
+msgstr "Arrival"
 
 #: partial-reservation.php:40
 msgid "Nuits"
-msgstr ""
+msgstr "Night"
 
 #: partial-reservation.php:52
 msgid "Nb personne"
-msgstr ""
+msgstr "Number of people"
 
 #: inc/shortcode-tripadvisor.php:5
 msgid "nos avis tripadvisor"
-msgstr ""
+msgstr "tripadvisor reviews"
 
 #: content-chambres.php:21
 msgid "de %s &euro; "
-msgstr ""
+msgstr "from %s &euro; "
 
 #: content-chambres.php:21
 msgid "à %s &euro; "
-msgstr ""
+msgstr "to %s &euro; "
 
 #: fonctions.php:245
 msgid "read_more"
 msgstr "read more"
+
+#: fonctions.php:36
+msgid "semaine"
+msgstr "week"
+
+msgid "visite-virtuelle"
+msgstr "virtual-tour"
+
+msgid "A partir de %s&euro; /semaine"
+msgstr "From %s&euro; /week"
+
+msgid "%s /semaine"
+msgstr "ùs /week"
+
+msgid "Location de maisons de vacances du domaine de Puychene"
+msgstr "Holiday houses rentals in Domaine de Puychêne"
+
+msgid "Louer %s"
+msgstr "Rent %s"
+
+msgid "visite 360"
+msgstr "visit 360"
+
+msgid "piscine"
+msgstr "swimming pool"
+
+msgid "parking"
+msgstr "parking"
+
+msgid "wifi"
+msgstr "wireless"

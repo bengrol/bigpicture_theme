@@ -8,8 +8,12 @@
     <div class="row" id="content">
         <section class="chambre-list col-md-offset-1 col-md-10 ">      
     <?php if ( have_posts() ) : 
-        $l = getCurrentLang();
-        $cgv = [1 =>279, 4=>91];
+        
+        $cgv = [
+            'en-US' =>540,
+            'fr-FR' => 476,
+             'de-DE'=>2597
+            ];
         $getCurrentbigpicturePage =  get_permalink( $post->ID );
         ?>
 
@@ -30,19 +34,15 @@
             <div class="col-lg-6 chambre-icon-set"> <!--  left column-->
                 <div class="row"> 
                     <div><i class="fa fa-bed fa-2x"></i><?php _e('Lit Double', 'bigpicture'); ?> 2x2m</div>
-                    <div><i class="fa fa-users fa-2x "></i>2 <?php _e('Personnes', 'bigpicture'); ?></div>
-                </div >
-                <div class="row">
                     <div><i class="fa fa-arrows-alt fa-2x"></i> <?php echo get_post_meta(get_the_ID(), '_surface-chambre', true) ?>M&sup2;  </div>    
-                    <div><i class="fontcustom icon-safe"></i><?php _e('coffre fort', 'bigpicture'); ?>  </div>
-                </div>
+                </div >
+                
                 <div class="row">
-                    <div><i class="fontcustom icon-shower"></i><?php _e('Douche et Bain', 'bigpicture'); ?> </div>
+                    <div><i class="fontcustom icon-shower"></i><?php _e('Douche', 'bigpicture'); ?> </div>
                     <div><i class="fontcustom icon-sofa"></i><?php _e('coin salon', 'bigpicture'); ?></div>
-                </div>
-                <div class="row">
-                    <div><i class="fontcustom icon-screen"></i><?php _e('Ecran plat', 'bigpicture'); ?> </div>
-                    <div><i class="fontcustom icon-fan"></i><?php _e('Clim', 'bigpicture'); ?></div>
+                    <div><i class="fontello-icon icon-swimming">&#xe838;</i><?php _e('piscine', 'bigpicture'); ?></div>
+                    <div><i class="fontello-icon icon-cab">&#xf1b9;</i><?php _e('parking', 'bigpicture'); ?></div>
+                    <div><i class="fontello-icon icon-wifi">&#xf1eb;</i><?php _e('wifi', 'bigpicture'); ?></div>
                 </div>
                 <span><?php the_content(); ?></span>
             </div>
@@ -65,12 +65,8 @@
                     </div>
                     <div class="col-lg-5 sec-info" >
                         
-                        <span class="cgv"><a href="<?=get_permalink( $cgv[$l]); ?>"><?php _e('Conditions Generales de Vente', 'bigpicture'); ?></a></span>
-                        <div class="social-icon-set">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $getCurrentbigpicturePage  ?>"><i class="fa fa-facebook-official fa-2x"></i></a>
-                            <a href="https://twitter.com/share?url=<?=  $getCurrentbigpicturePage  ?>&text=<?= bloginfo('description');?>"><i class="fa fa-twitter-square fa-2x"></i></a>
-                            <a href="https://plus.google.com/share?url=<?=  $getCurrentbigpicturePage  ?>"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                        </div>
+                    <span class="cgv"><a href="<?=get_permalink( $cgv[get_bloginfo('language')]); ?>"><?php _e('Conditions Generales de Vente', 'bigpicture'); ?></a></span>
+                        
                     </div>
                     
                 </div>

@@ -22,11 +22,6 @@
                     </div>
                     <div class="col-lg-12 sec-info" >
                         <span class="cgv"><a href=""><?php _e('Conditions Generales de Vente', 'bigpicture'); ?></a></span>
-                        <div class="social-icon-set">
-                            <a href=""><i class="fa fa-facebook-official fa-2x"></i></a>
-                            <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
-                            <a href=""><i class="fa fa-google-plus-square fa-2x"></i></a>
-                        </div>
                     </div>
                         
                 </div>
