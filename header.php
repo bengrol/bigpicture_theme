@@ -84,8 +84,16 @@
     <aside>
 
         <div class="btn-grp-offres" role="group" >
-              
-                <a href="<?php echo get_permalink( 1039); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
+
+            <?php
+            $blog = [
+            'en-US' =>1510,
+            'fr-FR' => 1039,
+            'de-DE'=>2765
+            ];
+            ?>
+
+                <a href="<?php echo get_permalink( $blog[get_bloginfo('language')]); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
                 <button id="bt-resa-aside"  class="btn-resa border-bottom-radius resa-toogle"><i class="fa fa-calendar "></i><?php _e('Reserver', 'bigpicture'); ?></button>
 
         </div>
