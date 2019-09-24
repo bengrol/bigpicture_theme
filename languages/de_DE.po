@@ -133,7 +133,7 @@ msgid "%s /semaine"
 msgstr "%s /week"
 
 msgid "Location de maisons de vacances du domaine de Puychene"
-msgstr "Holiday houses rentals in Domaine de Puychêne"
+msgstr "Ferienhäuser in Domaine de Puychêne"
 
 msgid "Louer %s"
 msgstr "Mieten %s"
@@ -149,3 +149,6 @@ msgstr "parkplatz"
 
 msgid "wifi"
 msgstr "wi-fi"
+
+msgid "Location Villa"
+msgstr "Ferienhäuser mieten"

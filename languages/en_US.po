@@ -148,3 +148,7 @@ msgstr "parking"
 
 msgid "wifi"
 msgstr "wireless"
+
+
+msgid "Location Villa"
+msgstr "Holiday Rental"

@@ -46,7 +46,7 @@
 
         </div>
 
-        <div class="btn-group-vertical btn-group-lg" role="group" id="main-nav-container" style='display:block'>
+        <div class="btn-group-vertical btn-group-lg" role="group" id="main-nav-container" >
             <nav id="main-nav">
                 <?php
                 $args = array(

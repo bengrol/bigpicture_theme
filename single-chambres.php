@@ -6,7 +6,7 @@
                 </section>
             </div>
     <div class="row" id="content">
-        <section class="chambre-list col-md-offset-1 col-md-10 ">      
+        <section class="site-content chambre-list col-md-offset-1 col-md-10 ">      
     <?php if ( have_posts() ) : 
         
         $cgv = [
