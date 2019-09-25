@@ -23,13 +23,13 @@ $getCurrentbigpicturePage =  get_permalink( $post->ID );
         <div class="row">
             <div class="col-lg-6 chambre-icon-set"> <!--  left column-->
                 <div class="row"> 
-                    <div><i class="fa fa-bed fa-2x"></i><?php _e('Lit Double', 'bigpicture'); ?> 2x2m</div>
+                    <div><i class="fa fa-bed fa-2x"></i><?php _e('Single', 'bigpicture'); ?> 90x200cm</div>
                     <div><i class="fa fa-arrows-alt fa-2x"></i> <?php echo get_post_meta(get_the_ID(), '_surface-chambre', true) ?>M&sup2;  </div>    
                 </div >
                 
                 <div class="row">
                     <div><i class="fontcustom icon-shower"></i><?php _e('Douche', 'bigpicture'); ?> </div>
-                    <div><i class="fontcustom icon-sofa"></i><?php _e('coin salon', 'bigpicture'); ?></div>
+                    <div><i class="fontcustom icon-sofa"></i><?php _e('Salon', 'bigpicture'); ?></div>
                     <div><i class="fontello-icon icon-swimming">&#xe838;</i><?php _e('piscine', 'bigpicture'); ?></div>
                     <div><i class="fontello-icon icon-cab">&#xf1b9;</i><?php _e('parking', 'bigpicture'); ?></div>
                     <div><i class="fontello-icon icon-wifi">&#xf1eb;</i><?php _e('wifi', 'bigpicture'); ?></div>
