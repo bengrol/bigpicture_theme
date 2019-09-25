@@ -163,14 +163,14 @@ section{
     }
 }
 
-#bandeau-clean{
+#bandeau{
     min-height: 320px; //230px
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#bandeau{
-    @extend #bandeau-clean;
+#bandeau-blur{
+    @extend #bandeau;
     @include filter-blur( 2px);
 }
 

@@ -1,7 +1,10 @@
 $(function() {
     
     /* variables */
-    
+    var classExpanded = "col-md-offset-1 col-md-10 expanded";
+    var classCollapsed = "col-md-offset-3 col-md-8 collapsed";
+    var  site_content = $('.site-content');
+
     /* options pour toogle */
     var optResa =  {
         anim : "drop",
@@ -67,24 +70,16 @@ $(function() {
     }
     
     function collapseElement($self, $state){
-        //console.log($self , $state);
-        
-        var classExpanded = "col-md-offset-1 col-md-10";
-        var classCollapsed = "col-md-offset-3 col-md-8";
-    
+        var menuIsExpanded = site_content.hasClass('expanded');
         if($widthSrceen<1150){
-            classCollapsed = "col-md-offset-4 col-md-8";
+            classCollapsed = "col-md-offset-4 col-md-8 collapsed";
         }
-        $site_content = $('.site-content');
-        stateExpanded = $site_content.hasClass('col-md-offset-1');
-        
-        
         if($state === true ){
             if($self.hasClass('boxpulse')){
                 $self.removeClass('boxpulse');
             }
-            if($widthSrceen>1000 &&  stateExpanded ){
-                $site_content
+            if($widthSrceen>1000 &&  menuIsExpanded ){
+                site_content
                   .removeClass(classExpanded)
                   .addClass(classCollapsed, optMenu.speed);
               }
@@ -92,16 +87,14 @@ $(function() {
             if(!$self.hasClass('boxpulse')){
                 $self.addClass('boxpulse');
             }
-            
-            if($widthSrceen>1000){
-                $site_content
+            if($widthSrceen>1000 ){
+                site_content
                   .addClass(classExpanded, optMenu.speed)
                   .removeClass(classCollapsed);
             }
         }           
-        
-        
     }
+
     /* End Functions */
     
     
@@ -171,7 +164,7 @@ $(function() {
     $('#content').css('min-height',  heightScreen*50/100);
     
     $('.visite360HD').on('click', function(){
-       console.log('visite360HD');
+       
         var $url =  $(this).attr('data-url');
         $(this)
                 .append('<span id="closeIframe"><i class="fa fa-times  fa-3x"></i></span>')
@@ -192,4 +185,21 @@ $(function() {
         var $trip = $('.tripadvisor').siblings('div');    
         toogleElement($trip, optResa);
     });
+
+
+    var displayContent =  $('.site-content.container').css("display");
+    
+    if(displayContent === 'block'){ // si le contenu est deployé 
+        site_content.removeClass(classCollapsed).addClass(classExpanded);
+        
+        // verifier que le menu clignote 
+        var menu = $('#menu-header');
+        if( !menu.hasClass('boxpulse') ){
+            menu.addClass('boxpulse');
+        }
+    
+    }else{
+
+    }
+
 });

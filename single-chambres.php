@@ -2,7 +2,7 @@
 <div class="container-fluid" >
 
 <div class="row">
-                <section id="bandeau" class="" style="background-image: url('<?= getImageBandeau() ?>')">
+                <section id="bandeau-clean" class="" style="background-image: url('<?= getImageBandeau() ?>')">
                 </section>
             </div>
     <div class="row" id="content">

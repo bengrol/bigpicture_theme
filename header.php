@@ -54,8 +54,6 @@
                 );
                 wp_nav_menu($args);
                 ?>
-
-                
             </nav>
 
         </div>
@@ -78,23 +76,19 @@
          
         <button class="btn-resa  resa-toogle" id="resa-responsive" style=""><i class="fa fa-calendar "></i><span><?php _e('Reserver', 'bigpicture'); ?></span></button>
     </header>
-                
-            
-
     <aside>
-
         <div class="btn-grp-offres" role="group" >
-              
-                <a href="<?php echo get_permalink( 1039); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
-                <button id="bt-resa-aside"  class="btn-resa border-bottom-radius resa-toogle"><i class="fa fa-calendar "></i><?php _e('Reserver', 'bigpicture'); ?></button>
+            <?php
+            $blog = [
+            'en-US' =>1510,
+            'fr-FR' => 1039,
+            'de-DE'=>2765
+            ];
+            ?>
 
+            <a href="<?php echo get_permalink( $blog[get_bloginfo('language')]); ?>" class="btn-event"><i class="fa fa-star "></i><?php _e('Actualités', 'bigpicture'); ?></a>
+            <button id="bt-resa-aside"  class="btn-resa border-bottom-radius resa-toogle"><i class="fa fa-calendar "></i><?php _e('Reserver', 'bigpicture'); ?></button>
         </div>
-
         <?php  get_template_part('partial', 'reservation'); ?>
     </aside>
-
-     
-
 <div id="main" class="site-main ">
-
-    

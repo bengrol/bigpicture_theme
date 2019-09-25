@@ -268,12 +268,12 @@ section .chambre-list {
 section .bd-ch {
   background-image: url("images/img-bandeau-ch-fl07.jpg"); }
 
-#bandeau-clean, #bandeau {
+#bandeau, #bandeau-blur {
   min-height: 320px;
   background-repeat: no-repeat;
   background-size: cover; }
 
-#bandeau {
+#bandeau-blur {
   filter: blur(2px);
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
@@ -650,7 +650,7 @@ span .icon-rotating {
     position: relative;
     top: -10px;
     background: transparent; }
-  #bandeau {
+  #bandeau, #bandeau-blur {
     min-height: 140px; }
   #img-logo-resp {
     width: 60%; }
@@ -726,7 +726,7 @@ span .icon-rotating {
 
 @media only screen and (max-width: 400px) and (min-width: 0em) {
   #menu-header-sp {
-    display: none; }
+    font-size: 23px; }
   header#main-header #menu-header, header#main-header #resa-responsive {
     width: 30%;
     margin: 1.3em 0;
