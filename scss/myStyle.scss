@@ -135,6 +135,10 @@ aside {
         color: #fff;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        &:hover{
+            background: #a8b85194;
+        }
     }
 }
 
@@ -163,6 +167,10 @@ section{
     min-height: 320px; //230px
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#bandeau-blur{
+    @extend #bandeau;
     @include filter-blur( 2px);
 }
 
@@ -550,4 +558,33 @@ footer{
         }    
     }
 }
+
+
+span {
+    .icon-rotating {
+    /* Firefox */
+    -moz-transition: all 0.5s ease;
+    /* WebKit */
+    -webkit-transition: all  0.5s ease;
+    /* Opera */
+    -o-transition: all  0.5s ease;
+    /* Standard */
+    transition: all  0.5s ease;
+
+    }
+}
+
+  .icone-rotate {
+    /* Firefox */
+    -moz-transform: rotate(180deg);
+    /* WebKit */
+    -webkit-transform: rotate(180deg);
+    /* Opera */
+    -o-transform: rotate(180deg);
+    /* Standard */
+    transform: rotate(180deg);
+}
+
+
+
 @import "_media.scss";

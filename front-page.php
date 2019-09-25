@@ -34,7 +34,8 @@ get_header(); ?>
 			'post_type' => $temp,
 			'posts_per_page' => 4,
 			'meta_key'   => '_post-type-chambre-encart',  // toute les chambres ayant un prix 
-			'meta_value' => 'oui'        
+            'meta_value' => 'oui' ,
+            'order'   => 'ASC',
 			);
 
 			$loop = new WP_Query( $args );
