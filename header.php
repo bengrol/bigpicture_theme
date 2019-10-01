@@ -68,8 +68,15 @@
         </div>
         
         <div class="btn-grp-offres" >
-            
-         <a href="<?=get_permalink( 1520); ?>" class="btn-offre border-bottom-radius">
+        <?php
+            $blog = [
+            'en-US' =>1527,
+            'fr-FR' => 1520,
+            'de-DE'=>2780
+            ];
+            ?>
+
+         <a href="<?php echo get_permalink( $blog[get_bloginfo('language')]); ?>" class="btn-offre border-bottom-radius">
             <i class="fa fa-bookmark-o"></i><?php _e('visite 360', 'bigpicture'); ?></a>
         </div>
                     
